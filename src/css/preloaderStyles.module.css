@@ -1,0 +1,22 @@
+.putBackground {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  z-index: 50;
+  position: fixed;
+}
+
+.removeBackground {
+  animation: remove-anim 700ms forwards cubic-bezier(1, 0.25, 0.1, 1);
+}
+
+@keyframes remove-anim {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 100%;
+  }
+}

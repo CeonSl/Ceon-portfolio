@@ -1,0 +1,46 @@
+.container {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  color: #333;
+  text-decoration: none;
+  opacity: 0;
+}
+
+.container svg {
+  font-size: 2.2rem;
+}
+
+.fadeIn .container {
+  animation: fade-in 500ms forwards;
+  opacity: 1;
+}
+
+.fadeOut .container {
+  animation: fade-out 500ms forwards;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  0% {
+    right: -15%;
+    opacity: 0;
+  }
+
+  100% {
+    right: 2%;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    right: 2%;
+    opacity: 1;
+  }
+
+  100% {
+    right: -15%;
+    opacity: 0;
+  }
+}

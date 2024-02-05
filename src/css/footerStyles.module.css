@@ -1,0 +1,30 @@
+.container {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px -1px 2px 0px;
+}
+
+.footer {
+  padding: 55px 0;
+  margin: 0;
+  justify-content: space-around;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer li {
+  color: #333333;
+  font-size: 0.833rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    align-content: center;
+    width: 100%;
+  }
+
+  .footer li {
+    align-self: center;
+  }
+}

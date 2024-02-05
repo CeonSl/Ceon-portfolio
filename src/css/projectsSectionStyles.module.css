@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 50px;
+  padding: 50px;
+}
+
+.containerTitle h3 {
+  font-size: 2.98rem;
+  color: #333333;
+}
+
+.containerProjects {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  gap: 15px;
+}
+
+.containerProject {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.containerProject img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.2s ease-out;
+  box-shadow: #dcbfff40 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.containerProject img:hover {
+  width: 99%;
+  height: 99%;
+  transition: all 0.2s ease-in;
+}
+
+.containerProject.tall {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+
+.containerProject.big {
+  grid-column: span 4;
+  grid-row: span 3;
+}
+
+.containerProject.small {
+  grid-row: span 1;
+  grid-column: span 2;
+}
+
+.containerProject.normal {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.containerProject.wide {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.containerProject.box {
+  grid-row: span 3;
+  grid-column: span 3;
+}
+
+@media only screen and (max-width: 1050px) {
+  .containerTitle h3 {
+    font-size: 2.44rem;
+  }
+
+  .containerProjects {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 150px;
+  }
+
+  .containerProject.tall {
+    grid-row: span 3;
+    grid-column: span 1;
+  }
+
+  .containerProject.big {
+    grid-column: span 1;
+    grid-row: span 3;
+  }
+
+  .containerProject.small {
+    grid-row: span 2;
+    grid-column: span 1;
+  }
+
+  .containerProject.normal {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .containerProject.wide {
+    grid-row: span 2;
+    grid-column: span 1;
+  }
+
+  .containerProject.box {
+    grid-row: span 3;
+    grid-column: span 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .containerTitle h3 {
+    font-size: 1.7rem;
+    color: #333333;
+  }
+}
