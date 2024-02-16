@@ -1,42 +1,33 @@
-import projectsSectionStyles from "../css/projectsSectionStyles.module.css";
-import goBackTopStyles from "../css/goBackTopStyles.module.css";
-import Project from "./Project.jsx";
-import GoBackTop from "./GoBackTop.jsx";
-import { forwardRef } from "react";
-import agencia28 from "../imgs/Agencia28.png";
-import spotifyProject from "../imgs/SpotifyPersonalProject.png";
-import andreaMakeUp from "../imgs/AndreaMakeUp.png";
-import ropaClothesCRUD from "../imgs/RopaClothesCRUD.png";
-import betterBlog from "../imgs/BetterBlog.png";
+import page28Siete from "../../videos/Agencia28.mp4";
+import Project from "./Project";
 
-const Projects = forwardRef((props, ref) => {
+const Projects = () => {
   return (
     <>
-      <div
-        className={`${
-          props.isIntersecting
-            ? goBackTopStyles.fadeIn
-            : goBackTopStyles.fadeOut
-        }`}
-      >
-        <GoBackTop />
-      </div>
-      <div className={projectsSectionStyles.containerProjects}>
-        <Project imgSrc={betterBlog} shape={projectsSectionStyles.tall} />
-        <Project imgSrc={spotifyProject} shape={projectsSectionStyles.normal} />
-        <Project imgSrc={agencia28} shape={projectsSectionStyles.big} />
-        <Project imgSrc={ropaClothesCRUD} shape={projectsSectionStyles.small} />
-        <Project imgSrc={andreaMakeUp} shape={projectsSectionStyles.wide} />
+      <div>
         <Project
-          imgSrc={
-            "https://www.nbmchealth.com/wp-content/uploads/2018/04/default-placeholder.png"
-          }
-          shape={projectsSectionStyles.box}
-        />
-        <div ref={ref} />
+          projectTitle={"Landing Page - Agencia 28Siete"}
+          videoSrc={page28Siete}
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eos
+          eligendi voluptatum natus est, similique facere omnis earum numquam
+          explicabo magni soluta autem, quibusdam, repellendus sint error.
+          Laboriosam, minima recusandae!
+        </Project>
+
+        <Project
+          projectTitle={"Landing Page - Agencia 28Siete"}
+          videoSrc={page28Siete}
+          reverse={true}
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eos
+          eligendi voluptatum natus est, similique facere omnis earum numquam
+          explicabo magni soluta autem, quibusdam, repellendus sint error.
+          Laboriosam, minima recusandae!
+        </Project>
       </div>
     </>
   );
-});
+};
 
 export default Projects;

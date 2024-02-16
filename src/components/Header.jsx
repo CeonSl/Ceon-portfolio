@@ -1,62 +1,46 @@
 import headerStyles from "../css/headerStyles.module.css";
-import ButtonsSocialMediaResume from "./ButtonsSocialMediaResume";
-import TitleHeader from "./TitleHeader";
-import ArrowRightHeader from "./icons/ArrowRightHeader";
-function Header({ isOpen, setIsOpen }) {
-  const handleCloseBars = () => {
-    setIsOpen(false);
-  };
+import goBackTopStyles from "../css/goBackTopStyles.module.css";
+import GoBackTop from "./icons/GoBackTop";
+import ArrowDownDocs from "./icons/ArrowDownDocs";
 
-  const giveHoverLi = (event) => {
-    event.currentTarget.classList.add(headerStyles.hoveringLi);
-    event.currentTarget.classList.remove(headerStyles.withoutHoveringLi);
-  };
-
-  const removeHoverLi = (event) => {
-    event.currentTarget.classList.remove(headerStyles.hoveringLi);
-    event.currentTarget.classList.add(headerStyles.withoutHoveringLi);
-  };
-
+function Header({ isIntersecting, setIsOpen }) {
   return (
     <>
-      <div
-        className={`${headerStyles.container}  ${
-          isOpen && headerStyles.showCompleteHeader
-        }`}
-      >
-        <div
-          className={`${headerStyles.arrowRightHeader} ${
-            isOpen && headerStyles.toLeft
-          }`}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <ArrowRightHeader />
-        </div>
-        <div className={`${headerStyles.containerTitleLinks}`}>
-          <TitleHeader setIsOpen={setIsOpen} />
-          <ul className={headerStyles.containerLinks}>
-            <li onMouseOver={giveHoverLi} onMouseOut={removeHoverLi}>
-              <a href="#projects" onClick={() => setIsOpen(false)}>
-                Proyectos
-              </a>
-            </li>
-            <li onMouseOver={giveHoverLi} onMouseOut={removeHoverLi}>
-              <a href="#about-me" onClick={() => setIsOpen(false)}>
-                Sobre mi
-              </a>
-            </li>
-            <li onMouseOver={giveHoverLi} onMouseOut={removeHoverLi}>
-              <a href="#contact-me" onClick={() => setIsOpen(false)}>
-                Contáctame
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className={headerStyles.containerButtons}>
+      <div className={`${headerStyles.container} `}>
+        <button className={`${headerStyles.containerDocs}`}>
+          <p type="button">Mis Documentos</p>
+          <ArrowDownDocs />
+        </button>
+        <ul className={headerStyles.containerLinks}>
+          <li>
+            <a href="#projects" onClick={() => setIsOpen(false)}>
+              Proyectos
+            </a>
+          </li>
+          <li>
+            <a href="#about-me" onClick={() => setIsOpen(false)}>
+              Sobre mi
+            </a>
+          </li>
+          <li>
+            <a href="#contact-me" onClick={() => setIsOpen(false)}>
+              Contáctame
+            </a>
+          </li>
+        </ul>
+        {/* <div className={headerStyles.containerButtons}>
           <ButtonsSocialMediaResume />
+        </div> */}
+        <div
+          className={`${
+            isIntersecting ? goBackTopStyles.fadeIn : goBackTopStyles.fadeOut
+          }`}
+        >
+          <GoBackTop />
         </div>
       </div>
-      <div
+
+      {/* <div
         className={`${headerStyles.containerResponsive} ${
           isOpen && headerStyles.containerResponsiveOpen
         }`}
@@ -102,7 +86,7 @@ function Header({ isOpen, setIsOpen }) {
             <ButtonsSocialMediaResume />
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

@@ -1,13 +1,24 @@
-import projectsSectionStyles from '../css/projectsSectionStyles.module.css'
+import projectsSectionStyles from "../css/projectsSectionStyles.module.css";
 
-function Project({shape, imgSrc}) {
+function Project({ projectTitle, children, videoSrc, reverse }) {
   return (
     <>
-      <div className={`${projectsSectionStyles.containerProject} ${shape}`}>
-        <img src={imgSrc}></img> 
-      </div>
+      <section
+        className={`${projectsSectionStyles.project} ${
+          reverse && projectsSectionStyles.reverseProject
+        }`}
+      >
+        <h3>{projectTitle}</h3>
+        <div className={projectsSectionStyles.dataProject}>
+          <p>{children}</p>
+          <video muted loop playsInline autoPlay>
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+        </div>
+      </section>
+      <div className={projectsSectionStyles.divider}></div>
     </>
-  )
+  );
 }
 
 export default Project;

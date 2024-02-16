@@ -8,24 +8,18 @@ import Footer from "./components/Footer.jsx";
 import useIntersecting from "./components/hooks/useIntersecting.jsx";
 import { preloader } from "./assets/js/preloader.js";
 import { useEffect } from "react";
-import { useState } from "react";
 
 const App = () => {
   const { isIntersectingState } = useIntersecting();
   useEffect(() => {
     preloader();
   }, []);
-  const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
+
   return (
     <>
       <div id="body"></div>
       <div className={mainAppStyles.container}>
-        <Header setIsOpen={setIsOpen} isOpen={isOpen} />
-        <div
-          className={`${isOpen && mainAppStyles.barIsOpen}`}
-          onClick={() => setIsOpen(false)}
-        ></div>
+        <Header isIntersecting={isIntersectingState} />
         <div className={`${mainAppStyles.containerApp}`}>
           <div className={mainAppStyles.app}>
             <MainSection />
