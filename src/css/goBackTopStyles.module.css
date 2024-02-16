@@ -1,46 +1,51 @@
 .container {
-  position: fixed;
-  bottom: 3%;
-  right: 3%;
   color: #333;
   text-decoration: none;
-  opacity: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 2rem;
+  z-index: 10;
 }
 
 .container svg {
   font-size: 2.2rem;
+  border: 1px rgba(208, 162, 247, 0.15) solid;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  padding: 0.3rem;
+  height: 20px;
+  width: 20px;
 }
 
 .fadeIn .container {
-  animation: fade-in 500ms forwards;
-  opacity: 1;
+  animation: fade-in 500ms forwards cubic-bezier(0.965, 0.24, 0.44, 1);
 }
 
 .fadeOut .container {
-  animation: fade-out 500ms forwards;
-  opacity: 0;
+  animation: fade-out 500ms forwards cubic-bezier(0.5, 0.82, 0.165, 1);
 }
 
 @keyframes fade-in {
   0% {
-    right: -15%;
+    transform: translateY(20%);
     opacity: 0;
   }
 
   100% {
-    right: 2%;
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 
 @keyframes fade-out {
   0% {
-    right: 2%;
     opacity: 1;
+    transform: translateY(0%);
   }
 
   100% {
-    right: -15%;
     opacity: 0;
+    transform: translateY(20%);
   }
 }

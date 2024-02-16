@@ -1,120 +1,58 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
-  margin-top: 50px;
-  padding: 50px;
+  padding: 3rem 16.5rem;
 }
 
 .containerTitle h3 {
   font-size: 2.98rem;
   color: #333333;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 10rem;
 }
 
-.containerProjects {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-auto-rows: 150px;
-  gap: 15px;
-}
-
-.containerProject {
-  width: 100%;
-  height: 100%;
+.project {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  border-radius: 5px;
+  margin-bottom: 10rem;
 }
 
-.containerProject img {
-  width: 95%;
-  height: 95%;
-  object-fit: cover;
-  object-position: center;
-  transition: all 0.2s ease-out;
-  box-shadow: #dcbfff40 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  border-radius: 5px;
-  cursor: pointer;
+.project.reverseProject .dataProject {
+  flex-direction: row-reverse;
 }
 
-.containerProject img:hover {
-  width: 99%;
-  height: 99%;
-  transition: all 0.2s ease-in;
+.project h3 {
+  font-size: 2.5rem;
+  margin: 0;
+  margin-bottom: 2rem;
 }
 
-.containerProject.tall {
-  grid-row: span 3;
-  grid-column: span 2;
+.project.reverseProject h3 {
+  text-align: end;
 }
 
-.containerProject.big {
-  grid-column: span 4;
-  grid-row: span 3;
+.dataProject {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
-.containerProject.small {
-  grid-row: span 1;
-  grid-column: span 2;
+.project p {
+  margin: 0;
 }
 
-.containerProject.normal {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.containerProject.wide {
-  grid-row: span 2;
-  grid-column: span 3;
-}
-
-.containerProject.box {
-  grid-row: span 3;
-  grid-column: span 3;
+.project video {
+  width: 50%;
+  border-radius: 0.5rem;
+  border: 1px rgba(208, 162, 247, 0.15) solid;
+  box-shadow: rgba(208, 162, 247, 0.15) 0px 6px 24px 0px,
+    rgba(208, 162, 247, 0.08) 0px 0px 0px 1px;
 }
 
 @media only screen and (max-width: 1050px) {
   .containerTitle h3 {
     font-size: 2.44rem;
-  }
-
-  .containerProjects {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 150px;
-  }
-
-  .containerProject.tall {
-    grid-row: span 3;
-    grid-column: span 1;
-  }
-
-  .containerProject.big {
-    grid-column: span 1;
-    grid-row: span 3;
-  }
-
-  .containerProject.small {
-    grid-row: span 2;
-    grid-column: span 1;
-  }
-
-  .containerProject.normal {
-    grid-column: span 1;
-    grid-row: span 2;
-  }
-
-  .containerProject.wide {
-    grid-row: span 2;
-    grid-column: span 1;
-  }
-
-  .containerProject.box {
-    grid-row: span 3;
-    grid-column: span 1;
   }
 }
 
