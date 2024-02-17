@@ -15,6 +15,10 @@ html {
   overflow-x: hidden;
 }
 
+* {
+  font-weight: 200 !important;
+}
+
 @font-face {
   font-family: "space-grotesk";
   src: url("./fonts/SpaceGrotesk-VariableFont_wght.woff2") format("woff2");

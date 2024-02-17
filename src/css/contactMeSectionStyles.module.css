@@ -3,18 +3,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0;
+  justify-content: center;
   width: 100%;
 }
 
 .containerTitle h3 {
   font-size: 2.98rem;
   padding: 35px 0;
+  margin: 0;
 }
 
 .containerForm {
-  width: 65%;
-  max-width: 65%;
+  width: 55%;
+  max-width: 55%;
 }
 
 .containerForm .form {
@@ -31,11 +32,11 @@
 
 .form input,
 .form textarea {
-  box-shadow: #dcbfff40 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: #d0a2f766 4px 4px 0px 0.5px;
   outline: none;
   border: transparent;
+  border: 1px solid #d0a2f766;
   padding: 15px 20px;
-  border-radius: 12px;
   margin-bottom: 20px;
   font-size: 0.833rem;
 }
@@ -48,10 +49,15 @@
   margin: 10px auto;
   padding: 15px 25px;
   border: none;
-  border-radius: 12px;
-  background-color: #dcbfff;
+  background-color: #fff;
   cursor: pointer;
   font-weight: 500;
+  border: 1px rgba(208, 162, 247, 0.15) solid;
+  transition: all 0.2s ease-in-out;
+}
+
+.form button:hover {
+  box-shadow: #d0a2f7 0.5px 0.5px 1px 0.5px;
 }
 
 @media only screen and (max-width: 1050px) {

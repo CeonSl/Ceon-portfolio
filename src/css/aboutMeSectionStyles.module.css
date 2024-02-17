@@ -28,13 +28,11 @@
   gap: 10px;
 }
 
-.containerInfoPhotos img {
+.containerInfoPhotos svg {
   width: 100px;
   height: auto;
   object-fit: cover;
   object-position: center;
-  box-shadow: #dcbfff40 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  border-radius: 25px;
 }
 
 .containerPhotos {
@@ -52,8 +50,8 @@
   height: 400px;
   object-fit: cover;
   object-position: center;
-  box-shadow: #dcbfff40 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  border-radius: 10px;
+  box-shadow: #d0a2f766 4px 4px 0px 0.5px;
+  border: 1px solid #d0a2f766;
 }
 
 .containerPhotos img:first-child {

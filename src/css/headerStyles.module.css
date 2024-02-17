@@ -8,9 +8,7 @@
 
 .containerLinks {
   z-index: 100;
-  box-shadow: rgba(208, 162, 247, 0.15) 0px 6px 24px 0px,
-    rgba(208, 162, 247, 0.08) 0px 0px 0px 1px;
-  border-radius: 0.5rem;
+  border-bottom: 1px solid #d0a2f7;
   margin: 1rem 0;
   display: flex;
   padding: 1rem 0;
@@ -25,21 +23,30 @@
   font-weight: 400;
   letter-spacing: -1px;
   font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.containerLinks li a:hover {
+  border-bottom: 2px solid #d0a2f7;
 }
 
 .containerDocs {
-  background-color: transparent;
   border: none;
   display: flex;
   align-self: center;
   padding: 0.8rem 1.5rem;
-  border-radius: 0.5rem;
   border: 1px rgba(208, 162, 247, 0.15) solid;
   background-color: #fff;
   position: absolute;
   left: 3%;
   top: -7%;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.containerDocs:hover {
+  box-shadow: #d0a2f7 0.5px 0.5px 1px 0.5px;
 }
 
 .containerDocs p {

@@ -1,10 +1,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
   align-items: center;
-  margin-bottom: 150px;
+  min-height: 100vh;
 }
 
 .containerPhotoInfoAndButtons {
@@ -13,7 +13,6 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  height: 85vh;
 }
 
 .containerImg {
@@ -23,9 +22,8 @@
 .containerImg img {
   width: 325px;
   height: auto;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  border-radius: 15px;
+  box-shadow: #d0a2f766 4px 4px 0px 0.5px;
+  border: 1px solid #d0a2f766;
   margin-right: 75px;
 }
 
@@ -41,12 +39,12 @@
 }
 
 .containerInfo h3 span {
-  font-weight: 700;
+  font-weight: 100;
   color: #d0a2f7;
 }
 
 .containerInfo h2 {
-  font-weight: 700;
+  font-weight: 100;
   color: #d0a2f7;
   font-size: calc(2.5rem * 2);
   margin: 0;
@@ -58,19 +56,29 @@
 }
 
 .containerInfo p span {
-  font-weight: 700;
+  font-weight: 100;
   color: #d0a2f7;
 }
 
 .containerArrowDown {
-  font-size: 2.35rem;
-  color: #161a30;
+  font-size: 1.5rem;
 }
 
 .containerArrowDown a {
-  color: #333333;
+  color: #000;
+  border: 1px rgba(208, 162, 247, 0.15) solid;
+  background-color: #ffffff;
+  padding: 0.3rem;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
 }
+
+.containerArrowDown a:hover {
+  box-shadow: #d0a2f7 0.5px 0.5px 1px 0.5px;
+}
+
 @media only screen and (max-width: 1700px) {
   .containerInfo h3 {
     font-size: 2.07rem;
