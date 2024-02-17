@@ -1,13 +1,9 @@
 import projectsSectionStyles from "../css/projectsSectionStyles.module.css";
 
-function Project({ projectTitle, children, videoSrc, reverse }) {
+function Project({ projectTitle, children, videoSrc }) {
   return (
     <>
-      <section
-        className={`${projectsSectionStyles.project} ${
-          reverse && projectsSectionStyles.reverseProject
-        }`}
-      >
+      <section className={`${projectsSectionStyles.project}`}>
         <h3>{projectTitle}</h3>
         <div className={projectsSectionStyles.dataProject}>
           <p>{children}</p>
