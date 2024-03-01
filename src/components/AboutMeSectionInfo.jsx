@@ -1,5 +1,5 @@
 import aboutMeSectionStyles from "../css/aboutMeSectionStyles.module.css";
-import JsIcon from "./icons/jsIcon";
+import JsIcon from "./icons/JsIcon";
 import ReactIcon from "./icons/ReactIcon";
 
 function AboutMeSectionInfo() {
