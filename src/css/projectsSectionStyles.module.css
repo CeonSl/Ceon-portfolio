@@ -44,6 +44,10 @@
   margin: 0;
 }
 
+.project p a {
+  color: #000;
+}
+
 .project video {
   flex: 0.5;
   width: 50%;
