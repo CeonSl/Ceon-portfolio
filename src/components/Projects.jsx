@@ -9,30 +9,11 @@ const Projects = () => {
           projectTitle={"Landing Page - Agencia 28Siete"}
           videoSrc={page28Siete}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eos
-          eligendi voluptatum natus est, similique facere omnis earum numquam
-          explicabo magni soluta autem, quibusdam, repellendus sint error.
-          Laboriosam, minima recusandae!
-        </Project>
-
-        <Project
-          projectTitle={"Landing Page - Agencia 28Siete"}
-          videoSrc={page28Siete}
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eos
-          eligendi voluptatum natus est, similique facere omnis earum numquam
-          explicabo magni soluta autem, quibusdam, repellendus sint error.
-          Laboriosam, minima recusandae!
-        </Project>
-
-        <Project
-          projectTitle={"Landing Page - Agencia 28Siete"}
-          videoSrc={page28Siete}
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eos
-          eligendi voluptatum natus est, similique facere omnis earum numquam
-          explicabo magni soluta autem, quibusdam, repellendus sint error.
-          Laboriosam, minima recusandae!
+          Desarrollé una Landing Page para la agencia de publicidad 28Siete, la
+          cual fue desarrollada utilizando NextJs.{" "}
+          <a href="https://www.agencia28.com" target="_blank" rel="noreferrer">
+            Link de la página
+          </a>
         </Project>
       </div>
     </>
