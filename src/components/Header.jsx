@@ -2,12 +2,19 @@ import headerStyles from "../css/headerStyles.module.css";
 import goBackTopStyles from "../css/goBackTopStyles.module.css";
 import GoBackTop from "./icons/GoBackTop";
 import ArrowDownDocs from "./icons/ArrowDownDocs";
+import ButtonsSocialMediaResume from "./ButtonsSocialMediaResume";
+import { useState } from "react";
 
 function Header({ isIntersecting, setIsOpen }) {
+  const [openDocs, setOpenDocs] = useState(false);
+
   return (
     <>
       <div className={`${headerStyles.container} `}>
-        <button className={`${headerStyles.containerDocs}`}>
+        <button
+          className={`${headerStyles.containerDocs}`}
+          onClick={() => setOpenDocs(!openDocs)}
+        >
           <p type="button">Mis Documentos</p>
           <ArrowDownDocs />
         </button>
@@ -28,9 +35,13 @@ function Header({ isIntersecting, setIsOpen }) {
             </a>
           </li>
         </ul>
-        {/* <div className={headerStyles.containerButtons}>
+        <div
+          className={`${headerStyles.containerButtons} ${
+            openDocs ? headerStyles.fadeIn : headerStyles.fadeOut
+          }`}
+        >
           <ButtonsSocialMediaResume />
-        </div> */}
+        </div>
         <div
           className={`${
             isIntersecting ? goBackTopStyles.fadeIn : goBackTopStyles.fadeOut

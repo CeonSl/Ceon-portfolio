@@ -4,7 +4,7 @@ import LinkedIn from "../components/icons/LinkedIn.jsx";
 import Twitter from "../components/icons/Twitter.jsx";
 import Mail from "../components/icons/Mail.jsx";
 import Resume from "../components/icons/Resume.jsx";
-import CVDoc from "../assets/docs/CARLOS ENRIQUE OROPEZA NEGRÓN CV.pdf";
+import CVDoc from "../assets/docs/CARLOS ENRIQUE OROPEZA NEGRÓN CV_.pdf";
 import { useState } from "react";
 import Check from "./icons/Check.jsx";
 import Copy from "./icons/Copy.jsx";
@@ -26,13 +26,15 @@ const ButtonsSocialMediaResume = () => {
   };
 
   const handleHoverButton = (event) => {
-    event.currentTarget.classList.add(headerStyles.showText);
-    event.currentTarget.classList.add(headerStyles.hoverIconButton);
+    event.currentTarget.children[0].children[0].classList.add(
+      headerStyles.linkHovered
+    );
   };
 
   const handleRemoveHoverButton = (event) => {
-    event.currentTarget.classList.remove(headerStyles.showText);
-    event.currentTarget.classList.remove(headerStyles.hoverIconButton);
+    event.currentTarget.children[0].children[0].classList.remove(
+      headerStyles.linkHovered
+    );
   };
 
   return (
@@ -55,17 +57,13 @@ const ButtonsSocialMediaResume = () => {
       <li>
         <a
           className={mainSectionStyles.anchorIcons}
-          onMouseOver={handleHoverButton}
-          onMouseOut={handleRemoveHoverButton}
           target="_blank"
           rel="noreferrer"
-          href=""
+          href="https://www.linkedin.com/in/carlos-enrique-oropeza"
+          onMouseOver={handleHoverButton}
+          onMouseOut={handleRemoveHoverButton}
         >
-          <div
-            className={headerStyles.containerIcon}
-            onMouseOver={handleHoverButton}
-            onMouseOut={handleRemoveHoverButton}
-          >
+          <div className={headerStyles.containerIcon}>
             <LinkedIn />
           </div>
           <p>Mi LinkedIn</p>
@@ -74,11 +72,11 @@ const ButtonsSocialMediaResume = () => {
       <li>
         <a
           className={mainSectionStyles.anchorIcons}
-          onMouseOver={handleHoverButton}
-          onMouseOut={handleRemoveHoverButton}
           target="_blank"
           rel="noreferrer"
-          href=""
+          href="https://twitter.com/CeonSl_"
+          onMouseOver={handleHoverButton}
+          onMouseOut={handleRemoveHoverButton}
         >
           <div className={headerStyles.containerIcon}>
             <Twitter />
@@ -87,15 +85,13 @@ const ButtonsSocialMediaResume = () => {
         </a>
       </li>
       <li>
-        <div
-          onMouseOver={handleHoverButton}
-          onMouseOut={handleRemoveHoverButton}
-          className={headerStyles.containerLiEmail}
-        >
+        <div className={headerStyles.containerLiEmail}>
           <a
             href="https://mail.google.com/mail/?view=cm&source=mailto&to=ceon20020508@gmail.com"
             target="_blank"
             rel="noreferrer"
+            onMouseOver={handleHoverButton}
+            onMouseOut={handleRemoveHoverButton}
           >
             <div className={headerStyles.containerIcon}>
               <Mail />
