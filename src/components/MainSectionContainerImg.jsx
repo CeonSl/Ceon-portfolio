@@ -1,5 +1,5 @@
 import mainSectionStyles from "../css/mainSectionStyles.module.css";
-import ceonImg from "../imgs/Ceon_img.jpeg";
+import ceonImg from "../imgs/Ceon_Img.jpeg";
 
 const MainSectionContainerImg = () => {
   return (
