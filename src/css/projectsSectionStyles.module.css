@@ -25,7 +25,7 @@
   font-size: 2rem;
   margin: 0;
   margin-bottom: 2rem;
-  color: #bd74fc;
+  color: var(--primary-color);
 }
 
 .project.reverseProject h3 {
@@ -54,8 +54,8 @@
   height: auto;
   padding: 0;
   margin: 0;
-  box-shadow: #d0a2f766 4px 4px 0px 0.5px;
-  border: 1px solid #d0a2f766;
+  box-shadow: var(--primary-shadow-color) 4px 4px 0px 0.5px;
+  border: 1px solid var(--primary-color);
 }
 
 @media only screen and (max-width: 1050px) {

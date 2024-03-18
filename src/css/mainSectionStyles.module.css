@@ -22,8 +22,8 @@
 .containerImg img {
   width: 325px;
   height: auto;
-  box-shadow: #d0a2f766 4px 4px 0px 0.5px;
-  border: 1px solid #d0a2f766;
+  box-shadow: var(--primary-shadow-color) 4px 4px 0px 0.5px;
+  border: 1px solid var(--primary-color);
   margin-right: 75px;
 }
 
@@ -40,12 +40,12 @@
 
 .containerInfo h3 span {
   font-weight: 100;
-  color: #d0a2f7;
+  color: var(--primary-color);
 }
 
 .containerInfo h2 {
   font-weight: 100;
-  color: #d0a2f7;
+  color: var(--primary-color);
   font-size: calc(2.5rem * 2);
   margin: 0;
   padding: 0;
@@ -57,7 +57,7 @@
 
 .containerInfo p span {
   font-weight: 100;
-  color: #d0a2f7;
+  color: var(--primary-color);
 }
 
 .containerArrowDown {
@@ -68,7 +68,7 @@
 
 .containerArrowDown a {
   color: #000;
-  border: 1px rgba(208, 162, 247, 0.15) solid;
+  border: 1px var(--primary-unmarked-color) solid;
   background-color: #ffffff;
   padding: 0.3rem;
   text-decoration: none;
@@ -78,7 +78,7 @@
 }
 
 .containerArrowDown a:hover {
-  box-shadow: #d0a2f7 0.5px 0.5px 1px 0.5px;
+  box-shadow: var(--primary-color) 0.5px 0.5px 1px 0.5px;
 }
 
 @media only screen and (max-width: 1700px) {

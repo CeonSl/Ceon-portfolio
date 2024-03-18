@@ -32,10 +32,10 @@
 
 .form input,
 .form textarea {
-  box-shadow: #d0a2f766 4px 4px 0px 0.5px;
+  box-shadow: var(--primary-shadow-color) 4px 4px 0px 0.5px;
   outline: none;
   border: transparent;
-  border: 1px solid #d0a2f766;
+  border: 1px solid var(--primary-color);
   padding: 15px 20px;
   margin-bottom: 20px;
   font-size: 0.833rem;
@@ -52,12 +52,12 @@
   background-color: #fff;
   cursor: pointer;
   font-weight: 500;
-  border: 1px rgba(208, 162, 247, 0.15) solid;
+  border: 1px var(--primary-unmarked-color) solid;
   transition: all 0.2s ease-in-out;
 }
 
 .form button:hover {
-  box-shadow: #d0a2f7 0.5px 0.5px 1px 0.5px;
+  box-shadow: var(--primary-color) 0.5px 0.5px 1px 0.5px;
 }
 
 @media only screen and (max-width: 1050px) {

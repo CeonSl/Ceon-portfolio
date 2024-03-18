@@ -51,7 +51,7 @@ const ButtonsSocialMediaResume = () => {
           <div className={headerStyles.containerIcon}>
             {downloadResume ? <Check /> : <Resume />}
           </div>
-          <p>Mira mi CV</p>
+          <p>Curriculum Vitae</p>
         </a>
       </li>
       <li>
@@ -66,7 +66,7 @@ const ButtonsSocialMediaResume = () => {
           <div className={headerStyles.containerIcon}>
             <LinkedIn />
           </div>
-          <p>Mi LinkedIn</p>
+          <p>LinkedIn</p>
         </a>
       </li>
       <li>
@@ -81,7 +81,7 @@ const ButtonsSocialMediaResume = () => {
           <div className={headerStyles.containerIcon}>
             <Twitter />
           </div>
-          <p>Mi Twitter</p>
+          <p>Twitter</p>
         </a>
       </li>
       <li>

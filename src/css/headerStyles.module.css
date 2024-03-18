@@ -8,7 +8,7 @@
 
 .containerLinks {
   z-index: 100;
-  border-bottom: 1px solid #d0a2f7;
+  border-bottom: 1px solid var(--primary-color);
   margin: 1rem 0;
   display: flex;
   padding: 1rem 0;
@@ -28,7 +28,7 @@
 }
 
 .containerLinks li a:hover {
-  border-bottom: 2px solid #d0a2f7;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .containerDocs {
@@ -36,7 +36,7 @@
   display: flex;
   align-self: center;
   padding: 0.8rem 1.5rem;
-  border: 1px rgba(208, 162, 247, 0.15) solid;
+  border: 1px var(--primary-unmarked-color) solid;
   background-color: #fff;
   position: absolute;
   left: 3%;
@@ -47,7 +47,7 @@
 }
 
 .containerDocs:hover {
-  box-shadow: #d0a2f7 0.5px 0.5px 1px 0.5px;
+  box-shadow: var(--primary-color) 0.5px 0.5px 1px 0.5px;
 }
 
 .containerDocs p {
@@ -65,8 +65,8 @@
 
 .containerButtons {
   background-color: #fff;
-  box-shadow: #d0a2f766 4px 4px 0px 0.5px;
-  border: 1px solid #d0a2f766;
+  box-shadow: var(--primary-shadow-color) 4px 4px 0px 0.5px;
+  border: 1px solid var(--primary-color);
   padding: 1.5rem;
   position: absolute;
   left: 3%;
@@ -138,13 +138,13 @@
   align-items: center;
   z-index: 10;
   cursor: pointer;
-  border: 1px rgba(208, 162, 247, 0.15) solid;
+  border: 1px var(--primary-unmarked-color) solid;
   padding: 2px;
   transition: all 0.2s ease-in-out;
 }
 
 .containerIconCopy:hover {
-  box-shadow: #d0a2f7 0.5px 0.5px 1px 0.5px;
+  box-shadow: var(--primary-color) 0.5px 0.5px 1px 0.5px;
 }
 
 .containerLiEmail {
@@ -157,10 +157,10 @@
   width: 25px;
   height: 25px;
   padding: 5px;
-  border: 1px rgba(208, 162, 247, 0.15) solid;
+  border: 1px var(--primary-unmarked-color) solid;
   transition: all 0.2s ease-in-out;
 }
 
 .linkHovered {
-  box-shadow: #d0a2f7 0.5px 0.5px 1px 0.5px;
+  box-shadow: var(--primary-color) 0.5px 0.5px 1px 0.5px;
 }
