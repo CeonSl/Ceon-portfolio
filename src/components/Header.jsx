@@ -50,54 +50,6 @@ function Header({ isIntersecting, setIsOpen }) {
           <GoBackTop />
         </div>
       </div>
-
-      {/* <div
-        className={`${headerStyles.containerResponsive} ${
-          isOpen && headerStyles.containerResponsiveOpen
-        }`}
-      >
-        <div className={headerStyles.headerResponsive}>
-          <h1 className={headerStyles.title}>
-            <a href="#main-section">Ceon</a>
-          </h1>
-          <div
-            className={`${isOpen && headerStyles.barsOpen} ${
-              headerStyles.barsResponsive
-            }`}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <ArrowRightHeader />
-          </div>
-        </div>
-        <div
-          className={`${headerStyles.containerLinksButtons} ${
-            isOpen
-              ? headerStyles.headerResponsiveIsOpen
-              : headerStyles.headerResponsiveIsClose
-          }`}
-        >
-          <ul className={`${headerStyles.containerLinks}`}>
-            <li>
-              <a onClick={handleCloseBars} href="#projects">
-                Proyectos
-              </a>
-            </li>
-            <li>
-              <a onClick={handleCloseBars} href="#about-me">
-                Sobre mi
-              </a>
-            </li>
-            <li>
-              <a onClick={handleCloseBars} href="#contact-me">
-                Contáctame
-              </a>
-            </li>
-          </ul>
-          <div className={headerStyles.containerButtonsResponsive}>
-            <ButtonsSocialMediaResume />
-          </div>
-        </div>
-      </div> */}
     </>
   );
 }

@@ -12,6 +12,15 @@
   --primary-color: #bd74fc;
   --primary-shadow-color: #bc74fc8f;
   --primary-unmarked-color: #bc74fc24;
+  /* font sizes */
+  --font-h1: 2.98rem;
+  --font-h2: 2.48rem;
+  --font-h3: 2.07rem;
+  --font-h4: 1.72rem;
+  --font-h5: 1.44rem;
+  --font-h6: 1.2rem;
+  --font-p: 1rem;
+  --font-small: 0.833rem;
 }
 
 html {
