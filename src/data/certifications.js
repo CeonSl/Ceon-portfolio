@@ -2,7 +2,7 @@ import Hackathon from "../imgs/Certificado HACKATHON.png";
 import Expowork from "../imgs/Certificado Expowork.jpeg";
 import Helpdesk from "../imgs/Certificado Help Desk.png";
 import TypeScript from "../imgs/Certificado TypeScript.png";
-import Javascript from "../imgs/Certificado javascript.png";
+import Javascript from "../imgs/Certificado Javascript.png";
 import Responsive from "../imgs/Certificado Responsive.png";
 import CCNAv7Switching from "../imgs/Certificado CCNAv7 Switching.png";
 import CCNAv7Redes from "../imgs/Certificado CCNAv7 Redes.png";
