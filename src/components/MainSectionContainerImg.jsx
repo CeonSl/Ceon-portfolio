@@ -1,4 +1,4 @@
-import ceonImg from "../imgs/Ceon_img.png";
+import ceonImg from "../imgs/Ceon_Img.png";
 import "../scss/mainSectionStyles.scss";
 
 const MainSectionContainerImg = () => {
