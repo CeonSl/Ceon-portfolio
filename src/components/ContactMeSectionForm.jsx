@@ -1,12 +1,10 @@
-import contactMeSectionStyles from "../css/contactMeSectionStyles.module.css";
-
 function ContactMeSectionForm() {
   return (
     <>
-      <div className={contactMeSectionStyles.containerForm}>
-        <form className={contactMeSectionStyles.form}>
+      <div className="container-form">
+        <form className="form">
           <label>Nombre</label>
-          <input type="text" placeholder="Carlos Oropeza..." />
+          <input type="text" placeholder="Nombre Apellido..." />
           <label>Correo</label>
           <input type="email" placeholder="correo1234@gmail.com..." />
           <label>Mensaje</label>

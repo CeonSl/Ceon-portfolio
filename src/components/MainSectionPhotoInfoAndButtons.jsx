@@ -1,11 +1,10 @@
-import mainSectionStyles from "../css/mainSectionStyles.module.css";
 import MainSectionContainerImg from "./MainSectionContainerImg";
 
 function MainSectionPhotoInfoAndButtons() {
   return (
-    <div className={mainSectionStyles.containerPhotoInfoAndButtons}>
+    <div className="container-img-text">
       <MainSectionContainerImg />
-      <div className={mainSectionStyles.containerInfo}>
+      <div className="container-text">
         <h3>
           Soy <span>Carlos Oropeza</span>,
         </h3>

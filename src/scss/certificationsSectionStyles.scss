@@ -1,0 +1,293 @@
+$font-h3: 2rem;
+$border-color:#33333388;
+$background-color: #24242B;
+$accent-color: #7877c6ff;
+$background-color-hovered: #1A1A1A;
+$font-p: 0.82rem;
+$svg-size: 17px;
+
+@mixin tablet {
+    @media screen and (max-width: 1000px){
+        @content
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 600px){
+        @content
+    }
+}
+
+.container-certifications {
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: $font-h3;
+        color: #fff;
+        
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .certifications {
+        width: 100%;
+        align-self: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 25px;
+
+        @include tablet(){
+            justify-content: center;
+            gap: 2rem;
+            flex-direction: column;
+        }
+
+
+        .certifications-group {
+
+            .container-certification {
+                position: absolute;
+                top: 0;
+                display: none;
+            }
+
+            .current-card {
+                position: inherit;
+                display: flex;
+            }
+
+            // .previous-card {}
+            .previous-card {
+                display: flex;
+                left: -60%;
+                transform: scale(0.9);
+                z-index: -1;
+                opacity: 0.35;
+                @include tablet() {
+                    display: none;
+                }
+            }
+
+            .next-card {
+                display: flex;
+                right: -60%;
+                transform: scale(0.9);
+                z-index: -1;
+                opacity: 0.35;
+                @include tablet() {
+                    display: none;
+                }
+            }
+        }
+
+        .arrow-left {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        .arrow-left, .arrow-right {
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            padding: .8rem;
+            border: 1px solid $border-color;
+            background-color: $background-color;
+            border-radius: 25px;
+            transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+            @include tablet() {
+                display: none;
+            }
+
+            &:hover {
+                background-color: $background-color-hovered;
+            }
+
+            svg{
+                width: $svg-size;
+                height: $svg-size;
+            }
+        }
+
+        .container-controls-arrow-responsive {
+            display: none;
+            width: 100%;
+            justify-content: space-evenly;
+            @include tablet() {
+                display: flex;
+            }
+
+            .arrow-left, .arrow-right  {
+                @include tablet() {
+                    display: flex;
+                }
+            }
+        }
+    }
+    .certifications-group {
+        @include tablet() {
+        display: flex;
+        justify-content: center;
+        }
+
+        .container-certification {
+            display: flex;
+            border: 1px solid $border-color;
+            padding: 1rem;
+            border-radius: 25px;
+            background-color: $background-color-hovered;
+            box-shadow: $background-color-hovered 0px 1px 1px 0px inset,$background-color-hovered 0px 25px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            gap: 3rem;
+            width: 700px; // Important 
+            transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            
+            @include tablet(){
+                gap: .5rem;
+                width: 90%;
+            }
+
+            @include mobile() {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .container-img-certification {
+                width: 250px ;
+                height: 250px;
+                overflow: hidden;
+                border-radius: 25px;
+                border: 1px solid $border-color;
+                transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                box-sizing: border-box;
+                display: inline-block;
+    
+                @include tablet(){
+                    width: 200px;
+                    height: 200px;
+                }
+    
+                &:hover {
+                    transform: translateY(-1%);
+                }
+    
+                img {
+                    min-width: 250px;
+                    width: 100%;
+                    height: 100%;
+                    aspect-ratio: 16/9;
+                    object-position: 50%;
+                    object-fit: cover;
+                    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    cursor: pointer;
+        
+                    &:hover {
+                        transform: scale(1.3);
+                    }
+                }
+            }
+            
+            .container-texts-buttons {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+                .container-text-certification {
+                    margin-top: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    .title-certification, .company-certification, .date-certification {
+                        margin: 0;
+                    }
+                    
+                    .title-certification {
+                        font-size: calc($font-h3 / 1.5);   
+    
+                    }
+        
+                    .company-certification {
+                        font-size: calc($font-h3 / 2.2);
+                        color: #fff;
+                        font-weight: 200;               
+                        margin-top: 0.5rem;
+                    }
+        
+                    .date-certification {
+                        font-size: calc($font-h3 / 2.5);
+                        margin-top: 0.5rem;
+                        color: #aaa;
+                    }
+                }
+    
+                .container-buttons {
+                    margin-bottom: 1rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1rem;
+    
+                    button {
+                        border:none;
+                        background-color: transparent;
+                        color: #fff;
+                        border: 1px solid $border-color;
+                        cursor: pointer;
+    
+                        &:hover {
+                            background-color: $background-color-hovered;
+                        }
+                    }
+    
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        border: 1px solid #0E76A8;
+                        
+                        &:hover {
+                            background-color: #0E76A8;
+                        }
+                    }
+                    
+                    button, a {
+                        border-radius: 25px;
+                        font-size: $font-p;
+                        background-color: $background-color;
+                        padding: .6rem 1rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+                        @include tablet(){
+                            padding: .3rem .5rem;
+                            gap: 0;
+    
+                        }
+    
+                        svg {
+                            width: $svg-size;
+                            height: $svg-size;
+    
+                            @include tablet(){
+                                width: calc($svg-size /1.2);
+                                height: calc($svg-size /1.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

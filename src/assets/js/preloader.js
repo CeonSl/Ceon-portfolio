@@ -1,11 +1,11 @@
-import preloaderStyles from "../../css/preloaderStyles.module.css";
+// import preloaderStyles from "../../css/preloaderStyles.module.css";
 
 export const preloader = () => {
   const body = document.getElementById("body");
   if (body) {
-    body.classList.add(preloaderStyles.putBackground);
+    // body.classList.add(preloaderStyles.putBackground);
     setTimeout(() => {
-      body.classList.add(preloaderStyles.removeBackground);
+      // body.classList.add(preloaderStyles.removeBackground);
     }, 500);
   }
 };

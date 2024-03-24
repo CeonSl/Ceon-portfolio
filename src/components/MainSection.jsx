@@ -1,14 +1,15 @@
 import MainSectionPhotoInfoAndButtons from "./MainSectionPhotoInfoAndButtons";
-import mainSectionStyles from "../css/mainSectionStyles.module.css";
-import MainSectionGoDown from "./MainSectionGoDown";
+import ButtonsSocialMediaResume from "./ButtonsSocialMediaResume";
 import React from "react";
 
 const MainSection = React.forwardRef((_, ref) => {
   return (
     <>
-      <div ref={ref} id="main-section" className={mainSectionStyles.container}>
+      <div ref={ref} id="main-section" className="container-main-section">
         <MainSectionPhotoInfoAndButtons />
-        <MainSectionGoDown />
+        <div className="container-buttons">
+          <ButtonsSocialMediaResume />
+        </div>
       </div>
     </>
   );

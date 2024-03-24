@@ -1,5 +1,3 @@
-import mainSectionStyles from "../css/mainSectionStyles.module.css";
-import headerStyles from "../css/headerStyles.module.css";
 import LinkedIn from "../components/icons/LinkedIn.jsx";
 import Twitter from "../components/icons/Twitter.jsx";
 import Mail from "../components/icons/Mail.jsx";
@@ -25,18 +23,6 @@ const ButtonsSocialMediaResume = () => {
     handleTimeout(setCopied);
   };
 
-  const handleHoverButton = (event) => {
-    event.currentTarget.children[0].children[0].classList.add(
-      headerStyles.linkHovered
-    );
-  };
-
-  const handleRemoveHoverButton = (event) => {
-    event.currentTarget.children[0].children[0].classList.remove(
-      headerStyles.linkHovered
-    );
-  };
-
   return (
     <ul>
       <li>
@@ -45,63 +31,52 @@ const ButtonsSocialMediaResume = () => {
           target="_blank"
           rel="noreferrer"
           onClick={() => handleTimeout(setDownloadResume)}
-          onMouseOver={handleHoverButton}
-          onMouseOut={handleRemoveHoverButton}
         >
-          <div className={headerStyles.containerIcon}>
+          <div className="icon-container">
             {downloadResume ? <Check /> : <Resume />}
           </div>
-          <p>Mira mi CV</p>
+          <p>Curriculum Vitae</p>
         </a>
       </li>
       <li>
         <a
-          className={mainSectionStyles.anchorIcons}
+          className=""
           target="_blank"
           rel="noreferrer"
           href="https://www.linkedin.com/in/carlos-enrique-oropeza"
-          onMouseOver={handleHoverButton}
-          onMouseOut={handleRemoveHoverButton}
         >
-          <div className={headerStyles.containerIcon}>
+          <div className="icon-container">
             <LinkedIn />
           </div>
-          <p>Mi LinkedIn</p>
+          <p>LinkedIn</p>
         </a>
       </li>
       <li>
         <a
-          className={mainSectionStyles.anchorIcons}
+          className=""
           target="_blank"
           rel="noreferrer"
           href="https://twitter.com/CeonSl_"
-          onMouseOver={handleHoverButton}
-          onMouseOut={handleRemoveHoverButton}
         >
-          <div className={headerStyles.containerIcon}>
+          <div className="icon-container">
             <Twitter />
           </div>
-          <p>Mi Twitter</p>
+          <p>Twitter</p>
         </a>
       </li>
       <li>
-        <div className={headerStyles.containerLiEmail}>
+        <div className="container-mail-button">
           <a
             href="https://mail.google.com/mail/?view=cm&source=mailto&to=ceon20020508@gmail.com"
             target="_blank"
             rel="noreferrer"
-            onMouseOver={handleHoverButton}
-            onMouseOut={handleRemoveHoverButton}
           >
-            <div className={headerStyles.containerIcon}>
+            <div className="icon-container">
               <Mail />
             </div>
-            <p>ceon20020508@gmail.com</p>
+            <p>Contáctame</p>
           </a>
-          <div
-            onClick={() => handleCopyEmail()}
-            className={headerStyles.containerIconCopy}
-          >
+          <div onClick={() => handleCopyEmail()} className="">
             {copied ? <Check /> : <Copy />}
           </div>
         </div>

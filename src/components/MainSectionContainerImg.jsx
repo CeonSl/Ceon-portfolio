@@ -1,10 +1,14 @@
-import mainSectionStyles from "../css/mainSectionStyles.module.css";
-import ceonImg from "../imgs/Ceon_img.jpeg";
+import ceonImg from "../imgs/Ceon_img.png";
+import "../scss/mainSectionStyles.scss";
 
 const MainSectionContainerImg = () => {
   return (
-    <div className={mainSectionStyles.containerImg}>
-      <img src={ceonImg} alt="ceon" title="ceon" />
+    <div className="profilePhoto">
+      <img
+        src={ceonImg}
+        alt="Carlos Oropeza foto"
+        title="Carlos Oropeza foto"
+      />
     </div>
   );
 };

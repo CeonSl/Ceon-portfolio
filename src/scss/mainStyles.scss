@@ -1,0 +1,49 @@
+@mixin tablet {
+    @media screen and (max-width: 1000px){
+        @content
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 600px){
+        @content
+    }
+}
+
+#root {
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 200vh;
+    background-color: #111;
+    top: 0;
+    z-index: -2;
+    background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(120,119,198,0.3),rgba(255,255,255,0));
+}
+.background::after {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    background-color: #000;
+    bottom: -100%;
+}
+
+.container-app {
+        display: flex;
+        justify-content: center;
+
+    .container-sections {
+        width: 1000px;
+
+        @include tablet() {
+            width: 750px;
+        }
+
+        @include mobile() {
+            width: 600px;
+        }
+    }
+}

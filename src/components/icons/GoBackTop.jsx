@@ -1,7 +1,6 @@
-import goBackTopStyles from "../../css/goBackTopStyles.module.css";
 function GoBackTop(props) {
   return (
-    <a href="#main-section" className={goBackTopStyles.container}>
+    <a href="#" className="icon-go-back-top">
       <svg
         fill="currentColor"
         viewBox="0 0 16 16"
