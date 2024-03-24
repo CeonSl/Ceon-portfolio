@@ -1,6 +1,6 @@
 import Certification from "./Certification";
 import Medallist from "./icons/Medallist";
-import Arrow from "./icons/Arrow.JSX";
+import Arrow from "./icons/Arrow.jsx";
 import { certifications } from "../data/certifications";
 import { useState } from "react";
 import { selectTypeCard } from "../assets/js/logic/selectTypeCard";
