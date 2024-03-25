@@ -4,10 +4,10 @@ function Footer() {
       <div className="container-footer">
         <ul className="footer-ul">
           <li>
-            <p>Portafolio 2023 | Diseñado por Ceon.</p>
+            <h6>Portafolio 2023 | Diseñado por Ceon.</h6>
           </li>
           <li>
-            <p>+51 912 315 701 | 2002</p>
+            <h6>+51 912 315 701 | 2002</h6>
           </li>
         </ul>
       </div>

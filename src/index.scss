@@ -1,3 +1,12 @@
+$font-large: 2.441rem; // h3
+$font-medium: 1.563rem; // h5
+$font-small: 1rem; // p
+$font-smaller: 0.8rem; // small
+
+$font-large-responsive: calc($font-large / 1.5); // h3
+$font-medium-responsive: calc($font-medium / 1.5); // h5
+$font-small-responsive: calc($font-small); // p
+$font-smaller-responsive:calc($font-smaller / 1.1); // small
 
 html {
   line-height: 1.15; /* 1 */
@@ -23,7 +32,28 @@ html {
 @include font('SpaceGrotesk', 'SpaceGrotesk-SemiBold', 600); // Semi-bold
 @include font('SpaceGrotesk', 'SpaceGrotesk-Bold', 800); // Bold
 
+@mixin tablet {
+  @media screen and (max-width: 1000px){
+      @content
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 600px){
+      @content
+  }
+}
+
+* {
+  @include mobile() {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+}
+
 body {
+
   margin: 0;
   font-family: "SpaceGrotesk", sans-serif;
   color: #333;
@@ -345,4 +375,49 @@ template {
 
 [hidden] {
   display: none;
+}
+
+
+p {
+  font-size: $font-small !important; // remove !important
+
+  @include mobile() {
+    font-size: $font-small-responsive !important; // remove !important
+  }
+}
+
+
+h3 {
+  font-size: $font-medium !important;
+
+  @include mobile() {
+    font-size: $font-medium-responsive !important;
+  }
+}
+
+h2 {
+  font-size: $font-large !important;
+
+  @include mobile() {
+    font-size: $font-large-responsive !important;
+  }
+}
+
+a {
+  font-size: $font-smaller !important; // remove !important
+
+  @include mobile() {
+    font-size: $font-smaller-responsive !important; // remove !important
+  }
+}
+
+h6 {
+  margin: 0;
+  color: #fff;
+  font-weight: 200;
+  font-size: $font-smaller !important; // remove !important
+
+  @include mobile() {
+    font-size: $font-smaller-responsive !important; // remove !important
+  }
 }

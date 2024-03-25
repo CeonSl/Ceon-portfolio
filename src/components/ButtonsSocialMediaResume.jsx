@@ -35,7 +35,7 @@ const ButtonsSocialMediaResume = () => {
           <div className="icon-container">
             {downloadResume ? <Check /> : <Resume />}
           </div>
-          <p>Curriculum Vitae</p>
+          Curriculum Vitae
         </a>
       </li>
       <li>
@@ -48,7 +48,7 @@ const ButtonsSocialMediaResume = () => {
           <div className="icon-container">
             <LinkedIn />
           </div>
-          <p>LinkedIn</p>
+          LinkedIn
         </a>
       </li>
       <li>
@@ -61,7 +61,7 @@ const ButtonsSocialMediaResume = () => {
           <div className="icon-container">
             <Twitter />
           </div>
-          <p>Twitter</p>
+          Twitter
         </a>
       </li>
       <li>
@@ -74,7 +74,7 @@ const ButtonsSocialMediaResume = () => {
             <div className="icon-container">
               <Mail />
             </div>
-            <p>Contáctame</p>
+            Contáctame
           </a>
           <div onClick={() => handleCopyEmail()} className="">
             {copied ? <Check /> : <Copy />}

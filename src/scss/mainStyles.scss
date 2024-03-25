@@ -39,11 +39,11 @@
         width: 1000px;
 
         @include tablet() {
-            width: 750px;
+            width: 601px;
         }
 
         @include mobile() {
-            width: 600px;
+            width: 95%;
         }
     }
 }

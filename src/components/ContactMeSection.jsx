@@ -6,10 +6,10 @@ function ContactMeSection() {
     <>
       <div id="contact-me" className="container-contact-me">
         <div>
-          <h3>
+          <h2>
             <SendMail />
             ¡Contáctame conmigo!
-          </h3>
+          </h2>
         </div>
         <ContactMeSectionForm />
       </div>

@@ -1,3 +1,4 @@
+import SendMessage from "./icons/SendMessage";
 function ContactMeSectionForm() {
   return (
     <>
@@ -9,7 +10,9 @@ function ContactMeSectionForm() {
           <input type="email" placeholder="correo1234@gmail.com..." />
           <label>Mensaje</label>
           <textarea placeholder="Me interesaría que trab...." rows={12} />
-          <button type="submit">Enviar mensaje</button>
+          <button type="submit">
+            <SendMessage /> Enviar mensaje
+          </button>
         </form>
       </div>
     </>

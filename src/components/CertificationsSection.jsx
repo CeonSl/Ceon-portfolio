@@ -83,10 +83,10 @@ function CertificationsSection() {
         setToggleViewer={setToggleViewer}
         toggleViewer={toggleViewer}
       />
-      <h3>
+      <h2>
         <Medallist />
         Certificaciones
-      </h3>
+      </h2>
       <div className="certifications">
         <button
           className="arrow-left"

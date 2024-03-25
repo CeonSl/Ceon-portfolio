@@ -2,6 +2,7 @@ $font-h3: 2rem;
 $border-color:#33333388;
 $background-color: #24242B;
 $accent-color: #7877c6ff;
+$svg-size: 17px;
 $background-color-hovered: #44444433;
 
 @mixin tablet {
@@ -27,7 +28,11 @@ $background-color-hovered: #44444433;
         flex-direction: column;
     }
 
-    h3 {
+    @include mobile() {
+        margin-bottom: 3rem;
+    }
+
+    h2 {
         padding: 0;
         margin: 1rem 0;
         font-size: $font-h3;
@@ -47,12 +52,21 @@ $background-color-hovered: #44444433;
         padding: 1rem;
         padding-right: 0;
 
+        @include tablet() {
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+        }
+
         .form {
             display: flex;
             flex-direction: column;
-
-
             gap: .2rem;
+
+            @include tablet() {
+                width: 95%;
+            }
+
             label {
                 font-size: calc($font-h3 / 2.2);
                 color: #fff;
@@ -70,15 +84,32 @@ $background-color-hovered: #44444433;
                 border-radius: 25px;
                 margin-bottom: 1.5rem;
                 color: #fff;
+
+                @include tablet() {
+                    width: 100%;
+                    min-width: 100%;
+                    max-width: 100%;
+                }
+
+                @include mobile() {
+                    max-width: 92%;
+                    min-width: 92%;
+                }
             }
 
+            @include mobile() {
+                width: 100%;
+            }
 
             textarea {
                 max-height: 400px;
                 min-height: 100px;
             }
 
+
             button {
+                display: flex;
+                align-items: center;
                 border: none;
                 background-color: transparent;
                 padding: 1rem;
@@ -90,6 +121,12 @@ $background-color-hovered: #44444433;
                 align-self: center;
                 transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
                 cursor: pointer;
+                gap: .6rem;
+
+                svg {
+                    width:$svg-size;
+                    height:$svg-size;
+                }
 
                 &:hover {
                     background-color: $background-color-hovered;

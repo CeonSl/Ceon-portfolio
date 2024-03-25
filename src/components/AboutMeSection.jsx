@@ -6,10 +6,10 @@ function AboutMeSection() {
   return (
     <>
       <div id="about-me" className="container-about-me">
-        <h3>
+        <h2>
           <Person />
           Sobre mi
-        </h3>
+        </h2>
         <div className="container-about-me-info">
           <AboutMeSectionInfo />
           <AboutMeSectionPhotos />

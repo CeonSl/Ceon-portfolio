@@ -29,7 +29,7 @@ function Certification({
           <div className="container-text-certification">
             <h3 className="title-certification">{title}</h3>
             <p className="company-certification">{company}</p>
-            <p className="date-certification">{date}</p>
+            <span className="date-certification">{date}</span>
           </div>
           <div className="container-buttons">
             <button onClick={() => handleOpenViewer()}>

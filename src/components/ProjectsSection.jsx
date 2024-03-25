@@ -6,10 +6,10 @@ const ProjectsSection = forwardRef((props, ref) => {
   return (
     <>
       <div id="projects" className="container-project-section">
-        <h3>
+        <h2>
           <Docs />
           ¿Que he realizado?
-        </h3>
+        </h2>
         <Projects ref={ref} isIntersecting={props.isIntersecting} />
       </div>
     </>

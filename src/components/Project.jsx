@@ -1,4 +1,4 @@
-import "../scss/projectStyles.scss";
+import KnowMore from "./icons/KnowMore";
 function Project({ projectTitle, text, videoSrc, link = "", children }) {
   return (
     <>
@@ -9,6 +9,7 @@ function Project({ projectTitle, text, videoSrc, link = "", children }) {
             <p>{text}</p>
             {link != "" && (
               <a href={link} target="_blank" rel="noreferrer">
+                <KnowMore />
                 Saber más
               </a>
             )}

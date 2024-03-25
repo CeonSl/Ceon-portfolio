@@ -3,13 +3,32 @@ $background-color: #24242B;
 $background-color-hovered: #44444433;
 $font-p: 0.82rem;
 
+@mixin tablet {
+    @media screen and (max-width: 1000px){
+        @content
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 600px){
+        @content
+    }
+}
+
+.container-header-main {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    z-index: 30;
+}
+
 .container-header {
     display: flex;
     justify-content: center;
     margin: .8rem;
-    position: fixed;
     width: 100%;
     z-index: 10;
+
 }
 
 .container-nav {
@@ -19,6 +38,12 @@ $font-p: 0.82rem;
     padding: 0;
     gap: 1rem;
     padding: .5rem 1.5rem;
+
+    @include mobile() {
+        padding: .2rem .75rem;
+        gap: 0.5rem;
+    }
+
     background-color: $background-color;
     border-radius: 25px;
     border:1px solid $border-color;
@@ -47,10 +72,15 @@ $font-p: 0.82rem;
     text-decoration: none;
     display: flex;
     align-items: center;
-    height: 100%;
     color: #fff;
     position: absolute;
     margin-left: 1rem;
+    height: 100%;
+    top: 0;
+
+    @include mobile() {
+    margin-left: .3rem;
+    }
 
     svg {
         padding: .5rem;
@@ -60,6 +90,12 @@ $font-p: 0.82rem;
         width: 20px;
         height: 20px;
         
+        @include mobile() {
+            padding: .5rem;
+            width: 17px;
+            height: 17px;
+        }
+
         &:hover {
             background-color: #44444433;
             border: 1px solid $border-color;

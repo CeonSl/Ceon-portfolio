@@ -3,7 +3,7 @@ $font-title: 3rem;
 $border-color:#33333388;
 $background-color: #24242B;
 $background-color-hovered: #44444433;
-$accent-color: #7877c6ff;
+$accent-color: #9694fe;
 $svg-size: 17px;
 $font-p: 0.82rem;
 
@@ -24,7 +24,11 @@ $font-p: 0.82rem;
     flex-direction: column;
     margin-bottom: 6rem;
 
-    h3 {
+    @include mobile() {
+        margin-bottom: 3rem;
+    }
+
+    h2 {
         margin: 0;
         display: flex;
         align-items: center;

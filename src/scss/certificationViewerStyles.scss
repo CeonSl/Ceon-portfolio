@@ -1,3 +1,16 @@
+
+@mixin tablet {
+    @media screen and (max-width: 1000px){
+        @content
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 600px){
+        @content
+    }
+}
+
 .container-viewer {
     background-color: #00000083;
     width: 100vw;
@@ -9,7 +22,6 @@
 }
 
 .container-viewer-things {
-
     position: fixed;
     left: 0;
     top: 0;
@@ -40,5 +52,9 @@
         width: 60%;
         object-fit: contain;
         user-select: none;
+
+        @include mobile() {
+            width: 90%;
+        }
     }
 }

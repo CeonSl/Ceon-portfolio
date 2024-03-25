@@ -3,7 +3,7 @@ $font-title: 3rem;
 $border-color:#33333388;
 $background-color: #24242B;
 $background-color-hovered: #44444433;
-$accent-color: #7877c6ff;
+$accent-color: #9694fe;
 $svg-size: 17px;
 $font-p: 0.82rem;
 
@@ -24,15 +24,25 @@ $font-p: 0.82rem;
     margin-bottom: 6rem;
     flex-direction: column;
     margin-top: 5rem;
+    
 
+    @include mobile() {
+        gap: 1rem;
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
 
     .container-img-text {
         display: flex;
         align-items: center;
+
         @include tablet() {
-        width: 100%;
+            width: 100%;
         }
 
+        @include mobile(){
+            flex-direction: column;
+        }
     
         .container-text {
             color: #fff;
@@ -44,7 +54,7 @@ $font-p: 0.82rem;
             @include tablet() {
                 width: 100%;
             }
-    
+
             h3,h2,p {
                 margin: 0;
                 padding: 0;
@@ -56,6 +66,10 @@ $font-p: 0.82rem;
                 @include tablet() {
                     font-size: calc($font-h3/1.1);
                 }
+
+                @include mobile() {
+                    font-size: calc($font-h3/1.5);
+                }
             }
     
             h2 {
@@ -64,6 +78,10 @@ $font-p: 0.82rem;
                 font-weight: 800;
                 @include tablet() {
                     font-size: calc($font-title/1.1);
+                }
+
+                @include mobile() {
+                    font-size: calc($font-title/1.8);
                 }
             }
     
@@ -75,9 +93,11 @@ $font-p: 0.82rem;
             p   {
                 width: 75%;
                 font-weight: 100;
-
-                @include tablet() {
+                @include mobile() {
+                    width: 100%;
                 }
+
+        
             }
         }
     
@@ -95,11 +115,18 @@ $font-p: 0.82rem;
                     margin-left: 0;
                     width: 200px;
                 }
+
+                @include mobile() {
+                    margin: .5rem;
+                    width: 170px;
+                }
             }
         }
     }
 
     .container-buttons {
+
+
         ul {
             display: flex;
             list-style: none;
@@ -108,10 +135,14 @@ $font-p: 0.82rem;
             gap: 1rem;
             @include tablet(){
                 gap: .4rem;
-                justify-content: space-evenly;
+                justify-content: start;
             }
 
-
+            @include mobile() {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+    
 
             svg {
                 color: #fff;
@@ -142,9 +173,6 @@ $font-p: 0.82rem;
                     gap: .5rem;
                     padding: .6rem 1rem;
                     flex-wrap: wrap;
-
-                    @include mobile() {
-                    }
 
                     @include tablet(){
                         padding: .6rem .8rem;
