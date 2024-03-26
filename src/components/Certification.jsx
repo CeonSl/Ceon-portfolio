@@ -15,13 +15,16 @@ function Certification({
   const handleOpenViewer = () => {
     setToggleViewer(true);
   };
+  let imgSmall = "";
 
-  let urlSplited = img.split("/");
-  let imgSplited = img.split("/")[3].split("?");
-  imgSplited[0] =
-    imgSplited[0].split(".")[0] + " small." + imgSplited[0].split(".")[1];
-  urlSplited[3] = imgSplited.join("?");
-  let imgSmall = urlSplited.join("/");
+  if (img) {
+    let urlSplited = img.split("/");
+    let imgSplited = img.split("/")[3].split("?");
+    imgSplited[0] =
+      imgSplited[0].split(".")[0] + " small." + imgSplited[0].split(".")[1];
+    urlSplited[3] = imgSplited.join("?");
+    imgSmall = urlSplited.join("/");
+  }
 
   return (
     <>
