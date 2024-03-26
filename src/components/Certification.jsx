@@ -14,10 +14,20 @@ function Certification({
     setToggleViewer(true);
   };
 
+  let urlSplited = img.split("/");
+  let imgSplited = img.split("/")[3].split("?");
+  imgSplited[0] =
+    imgSplited[0].split(".")[0] + " small." + imgSplited[0].split(".")[1];
+  urlSplited[3] = imgSplited.join("?");
+  let imgSmall = urlSplited.join("/");
+
   return (
     <>
       <div className={`container-certification ${classNameForShowingCard}`}>
-        <div className="container-img-certification">
+        <div
+          className="container-img-certification"
+          style={{ backgroundImage: `url("${imgSmall}")` }}
+        >
           <img
             src={img}
             alt={`certificado de ${title}`}

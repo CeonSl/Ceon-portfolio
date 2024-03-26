@@ -86,8 +86,7 @@ $font-p: 0.82rem;
     position: absolute;
     margin-left: 1rem;
     height: 100%;
-    top: 0;
-    opacity: 0 !important;
+    top: -100%;
 
     @include mobile() {
     margin-left: .3rem;
@@ -108,52 +107,22 @@ $font-p: 0.82rem;
         }
 
         &:hover {
-            background-color: #44444433;
+            background-color: $background-color-hovered;
             border: 1px solid $border-color;
         }
     }
 }
 
 .show-back-top{
+    visibility: visible;
+    opacity: 1;
     top: 0;
-    opacity: 1 !important;
-    @include keyframes(show) {
-        from {
-            top: -100%;
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 1;
-        }
-
-        to {
-            top: 0;
-            opacity: 1;
-        }
-    }
-
-    @include animate(show, 1000ms, cubic-bezier(0.165, 0.84, 0.44, 1), 1)
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .hide-back-top{
-    top: -100%;
+    visibility: hidden;
     opacity: 0;
-    @include keyframes(hide) {
-        from {
-            top: 0;
-            opacity: 1;
-        }
-
-        50% {
-            opacity: 0;
-        }
-
-        to {
-            top: -100%;
-            opacity: 0;
-        }
-    }
-
-    @include animate(hide, 1000ms, cubic-bezier(0.165, 0.84, 0.44, 1), 1)
+    top: -100%;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }

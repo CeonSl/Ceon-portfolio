@@ -66,16 +66,26 @@ $font-p: 0.82rem;
         }
 
         .container-images {
+            background-image: url("../imgs/Ceon_Img_about_me_small.webp");
+            border-radius: 25px;
+            width: 250px;
+            min-width: 250px;
+            background-position: center;
+            background-size: cover;
+            aspect-ratio: 1/1;
+            border: 1px solid $border-color;
+            min-height: 100%;
+            opacity: 0;
+
             @include tablet() {
                 align-self: center;
             }
             img {
-                width: 250px;
+                width: 100%;
                 aspect-ratio: 1/1;
                 object-fit: cover;
+                object-position: center;
                 border-radius: 25px;
-                border: 1px solid $border-color;
-                padding: .2rem;
             }
         }
     }

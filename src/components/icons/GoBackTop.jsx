@@ -3,7 +3,7 @@ function GoBackTop(props) {
   return (
     <a
       href="#"
-      className={`icon-go-back-top ${
+      className={`icon-go-back-top  ${
         isIntersecting ? "show-back-top" : "hide-back-top"
       }`}
     >
