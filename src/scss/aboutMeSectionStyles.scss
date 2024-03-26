@@ -75,12 +75,12 @@ $font-p: 0.82rem;
             aspect-ratio: 1/1;
             border: 1px solid $border-color;
             min-height: 100%;
-            opacity: 0;
 
             @include tablet() {
                 align-self: center;
             }
             img {
+                opacity: 0;
                 width: 100%;
                 aspect-ratio: 1/1;
                 object-fit: cover;

@@ -114,6 +114,16 @@ $font-p: 0.82rem;
             background-position: center;
             height: 400px;
 
+            @include tablet() {
+                width: 200px;
+                min-width: 200px;
+                height: 300px;
+            }
+
+            @include mobile() {
+                margin: 1rem;
+            }
+
             img {
                 object-position: center;
                 object-fit: cover;
@@ -126,11 +136,11 @@ $font-p: 0.82rem;
                     margin: 1rem;
                     margin-left: 0;
                     width: 200px;
+                    min-width: 200px;
                 }
 
                 @include mobile() {
-                    margin: .5rem;
-                    width: 170px;
+                    margin: 0;
                 }
             }
         }
