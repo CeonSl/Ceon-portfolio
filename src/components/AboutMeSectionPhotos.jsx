@@ -1,16 +1,18 @@
-import aboutMeSectionStyles from "../css/aboutMeSectionStyles.module.css";
-import explicacionWarshall from "../imgs/explicacionWarshall.png";
+import ceonImgAboutMe from "../imgs/Ceon_Img_about_me.webp";
+import { useState } from "react";
 
 function AboutMeSectionPhotos() {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <>
-      <div className={aboutMeSectionStyles.containerPhotos}>
+      <div className={`container-images ${loaded ? "show-img" : "hide-img"} `}>
         <img
-          src="https://media.istockphoto.com/id/1197640540/es/foto/dise%C3%B1o-del-sitio-web-desarrollo-de-tecnolog%C3%ADas-de-programaci%C3%B3n-y-codificaci%C3%B3n.jpg?s=2048x2048&w=is&k=20&c=KrqgC27MPllB8WSFwvFF_FOIFVpeCFSTf_qvt58hacY="
-          alt=""
-          title=""
+          src={ceonImgAboutMe}
+          alt="Carlos Oropeza foto 2"
+          title="Carlos Oropeza foto 2"
+          onLoad={() => setLoaded(true)}
         />
-        <img src={explicacionWarshall} alt="" title="" />
       </div>
     </>
   );

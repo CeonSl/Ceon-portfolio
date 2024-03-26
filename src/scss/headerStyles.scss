@@ -1,0 +1,128 @@
+$border-color:#33333388 ;
+$background-color: #24242B;
+$background-color-hovered: #44444433;
+$font-p: 0.82rem;
+
+@mixin tablet {
+    @media screen and (max-width: 1000px){
+        @content
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 600px){
+        @content
+    }
+}
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content
+    }
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+    animation: $animation $duration $method $times;
+}
+
+.container-header-main {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    z-index: 30;
+}
+
+.container-header {
+    display: flex;
+    justify-content: center;
+    margin: .8rem;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.container-nav {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+    padding: .5rem 1.5rem;
+
+    @include mobile() {
+        padding: .2rem .75rem;
+        gap: 0.5rem;
+    }
+
+    background-color: $background-color;
+    border-radius: 25px;
+    border:1px solid $border-color;
+
+    li {
+        padding: .5rem 0;
+        a {
+            text-decoration: none;
+            color: #fff;
+            padding: .4rem .6rem;
+            letter-spacing: -.8px;
+            border-radius: 25px;
+            border: 1px solid transparent;
+            font-size: $font-p;
+            transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+            &:hover {
+                background-color: $background-color-hovered;
+                border: 1px solid $border-color;
+        }
+        }
+    }
+}
+
+.icon-go-back-top {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    margin-left: 1rem;
+    height: 100%;
+    top: -100%;
+
+    @include mobile() {
+    margin-left: .3rem;
+    }
+
+    svg {
+        padding: .5rem;
+        border-radius: 25px;
+        background-color: $background-color;
+        border: 1px solid $border-color;
+        width: 20px;
+        height: 20px;
+        
+        @include mobile() {
+            padding: .5rem;
+            width: 17px;
+            height: 17px;
+        }
+
+        &:hover {
+            background-color: $background-color-hovered;
+            border: 1px solid $border-color;
+        }
+    }
+}
+
+.show-back-top{
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hide-back-top{
+    visibility: hidden;
+    opacity: 0;
+    top: -100%;
+    transition: all 1s cubic-bezier(.16,.84,.37,.64);
+}
