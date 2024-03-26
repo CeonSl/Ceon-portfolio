@@ -4,13 +4,13 @@ import ProjectsSection from "./components/ProjectsSection.jsx";
 import AboutMeSection from "./components/AboutMeSection.jsx";
 import ContactMeSection from "./components/ContactMeSection.jsx";
 import Footer from "./components/Footer.jsx";
-// import useIntersecting from "./components/hooks/useIntersecting.jsx";
+import useIntersecting from "./components/hooks/useIntersecting.jsx";
 import { preloader } from "./assets/js/preloader.js";
 import { useEffect } from "react";
 import CertificationsSection from "./components/CertificationsSection.jsx";
 
 const App = () => {
-  // const { isIntersectingState } = useIntersecting();
+  const { isIntersectingState } = useIntersecting();
   useEffect(() => {
     preloader();
   }, []);
@@ -20,12 +20,10 @@ const App = () => {
       <div id="body"></div>
       <div className="background"></div>
       <div className="container-app">
-        {/* <Header isIntersecting={isIntersectingState} /> */}
-        <Header />
+        <Header isIntersecting={isIntersectingState} />
         <div className="container-sections">
           <MainSection />
-          <ProjectsSection />
-          {/* <ProjectsSection isIntersecting={isIntersectingState} /> */}
+          <ProjectsSection isIntersecting={isIntersectingState} />
           <CertificationsSection />
           <AboutMeSection />
           <ContactMeSection />

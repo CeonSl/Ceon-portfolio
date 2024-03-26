@@ -1,15 +1,15 @@
-import Hackathon from "../imgs/Certificado HACKATHON.png";
-import Expowork from "../imgs/Certificado Expowork.jpeg";
-import Helpdesk from "../imgs/Certificado Help Desk.png";
-import TypeScript from "../imgs/Certificado TypeScript.png";
-import Javascript from "../imgs/Certificado Javascript.png";
-import Responsive from "../imgs/Certificado Responsive.png";
-import CCNAv7Switching from "../imgs/Certificado CCNAv7 Switching.png";
-import CCNAv7Redes from "../imgs/Certificado CCNAv7 Redes.png";
-import CyberOps from "../imgs/Certificado CyberOps.png";
-import CCNAv7Introduction from "../imgs/Certificado Introduccion.png";
-import Seguridad from "../imgs/Certificado Seguridad.png";
-import Python from "../imgs/Certificado Python.png";
+import Hackathon from "../imgs/Certificado HACKATHON.webp";
+import Expowork from "../imgs/Certificado Expowork.webp";
+import Helpdesk from "../imgs/Certificado Help Desk.webp";
+import TypeScript from "../imgs/Certificado TypeScript.webp";
+import Javascript from "../imgs/Certificado Javascript.webp";
+import Responsive from "../imgs/Certificado Responsive.webp";
+import CCNAv7Switching from "../imgs/Certificado CCNAv7 Switching.webp";
+import CCNAv7Redes from "../imgs/Certificado CCNAv7 Redes.webp";
+import CyberOps from "../imgs/Certificado CyberOps.webp";
+import CCNAv7Introduction from "../imgs/Certificado Introduccion.webp";
+import Seguridad from "../imgs/Certificado Seguridad.webp";
+import Python from "../imgs/Certificado Python.webp";
 
 export const certifications = [
   {

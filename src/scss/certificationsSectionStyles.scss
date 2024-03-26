@@ -6,6 +6,16 @@ $background-color-hovered: #1A1A1A;
 $font-p: 0.82rem;
 $svg-size: 17px;
 
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content
+    }
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+    animation: $animation $duration $method $times;
+}
+
 @mixin tablet {
     @media screen and (max-width: 1000px){
         @content
@@ -229,6 +239,7 @@ $svg-size: 17px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                opacity: 1;
 
                     
                 @include mobile() {
@@ -237,6 +248,18 @@ $svg-size: 17px;
                     max-height: 200px;
                     margin-bottom: 1rem;
                 }
+
+                @include keyframes(show-text) {
+                    from {
+                        opacity: 0;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                @include animate(show-text, 1000ms, ease, 1);
     
     
                 .container-text-certification {

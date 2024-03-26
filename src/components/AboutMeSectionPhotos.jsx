@@ -1,4 +1,4 @@
-import ceonImgAboutMe from "../imgs/Ceon_Img_about_me.jpeg";
+import ceonImgAboutMe from "../imgs/Ceon_Img_about_me.webp";
 
 function AboutMeSectionPhotos() {
   return (

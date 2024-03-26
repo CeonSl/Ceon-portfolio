@@ -1,0 +1,96 @@
+$background-color: #24242B;
+$border-color:#33333388;
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content
+    }
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+    animation: $animation $duration $method $times;
+}
+
+@mixin tablet {
+    @media screen and (max-width: 1000px){
+        @content
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 600px){
+        @content
+    }
+}
+
+.container-toast {
+    z-index: 40;
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    padding: 1.5rem;
+    border-radius: 25px;
+    opacity: 0 !important;
+    
+    @include tablet() {
+        top: 10%;
+        padding: 1rem;
+    }
+
+    .message-toast {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        color: #fff;
+        margin: 0;
+    }
+}
+
+.show-toast {
+    opacity: 1 !important;
+    left: 2%;
+    @include keyframes(show-toast) {
+
+        from {
+            left: -50%;
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+        
+        to {
+            opacity: 1;
+            left: 2%;
+        }
+    }
+
+    @include animate(show-toast, 500ms, cubic-bezier(0.165, 0.84, 0.44, 1), 1)
+}
+
+.hide-toast {
+    opacity: 0;
+    left: -50%;
+    @include keyframes(hide-toast) {
+        from {
+            left: 2%;
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+        
+        to {
+            opacity: 0;
+            left: -50%;
+        }
+    }
+
+    @include animate(hide-toast, 1500ms, cubic-bezier(0.165, 0.84, 0.44, 1), 1)
+   
+}

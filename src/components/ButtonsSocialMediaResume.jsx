@@ -2,7 +2,7 @@ import LinkedIn from "../components/icons/LinkedIn.jsx";
 import Twitter from "../components/icons/Twitter.jsx";
 import Mail from "../components/icons/Mail.jsx";
 import Resume from "../components/icons/Resume.jsx";
-import CVDoc from "../assets/docs/CARLOS ENRIQUE OROPEZA NEGRÓN CV_.pdf";
+import CVDoc from "../assets/docs/Español CV GF - CARLOS ENRIQUE OROPEZA NEGRÓN.pdf";
 import { useState } from "react";
 import Check from "./icons/Check.jsx";
 import Copy from "./icons/Copy.jsx";

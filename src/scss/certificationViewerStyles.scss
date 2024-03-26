@@ -11,6 +11,17 @@
     }
 }
 
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content
+    }
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+    animation: $animation $duration $method $times;
+}
+
+
 .container-viewer {
     background-color: #00000083;
     width: 100vw;
@@ -19,6 +30,17 @@
     top: 0;
     left: 0;
     z-index: 10;
+
+    @include keyframes(change-bg) {
+        from {
+            background-color: transparent;
+        }
+
+        to {
+            background-color: #00000083;
+        }
+    }
+    @include animate(change-bg, 500ms, cubic-bezier(0.165, 0.84, 0.44, 1), 1)
 }
 
 .container-viewer-things {
@@ -35,6 +57,18 @@
     width: 100%;
     flex-direction: column;
     justify-content: center;
+    opacity: 1;
+    
+    @include keyframes(show-things) {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+    @include animate(show-things, 1000ms, cubic-bezier(0.165, 0.84, 0.44, 1), 1);
 
     .container-exit {
         cursor: pointer;
@@ -52,6 +86,7 @@
         width: 60%;
         object-fit: contain;
         user-select: none;
+
 
         @include mobile() {
             width: 90%;

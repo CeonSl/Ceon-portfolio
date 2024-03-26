@@ -10,6 +10,7 @@ import "./scss/contactMeSectionStyles.scss";
 import "./scss/footerStyles.scss";
 import "./scss/certificationsSectionStyles.scss";
 import "./scss/certificationViewerStyles.scss";
+import "./scss/toastStyles.scss";
 import "./index.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
