@@ -69,12 +69,12 @@ html {
   animation: $animation $duration $method $times;
 }
 
-* {
-  @include mobile() {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-  }
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
