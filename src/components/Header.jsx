@@ -15,10 +15,10 @@ function Header({ isIntersecting }) {
             <li>
               <a href="#contact-me">Contáctame</a>
             </li>
+            <div>
+              <GoBackTop isIntersecting={isIntersecting} />
+            </div>
           </ul>
-        </div>
-        <div>
-          <GoBackTop isIntersecting={isIntersecting} />
         </div>
       </div>
     </>

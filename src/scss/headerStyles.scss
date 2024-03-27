@@ -29,7 +29,10 @@ $font-p: 0.82rem;
     position: fixed;
     width: 100%;
     display: flex;
-    z-index: 30;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .container-header {
@@ -37,11 +40,11 @@ $font-p: 0.82rem;
     justify-content: center;
     margin: .8rem;
     width: 100%;
-    z-index: 10;
-
+    z-index: 1;
 }
 
 .container-nav {
+    position: relative;
     display: inline-flex;
     list-style: none;
     margin: 0;
@@ -78,18 +81,20 @@ $font-p: 0.82rem;
     }
 }
 
+
 .icon-go-back-top {
     text-decoration: none;
     display: flex;
     align-items: center;
     color: #fff;
-    position: absolute;
-    margin-left: 1rem;
+    margin-left: 2rem;
+    position:absolute;
     height: 100%;
-    top: -100%;
-
+    display: flex;
+    top: 0%;
+    
     @include mobile() {
-    margin-left: .3rem;
+    margin-left: 1rem;
     }
 
     svg {
@@ -99,11 +104,12 @@ $font-p: 0.82rem;
         border: 1px solid $border-color;
         width: 20px;
         height: 20px;
+        transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
         
         @include mobile() {
-            padding: .5rem;
-            width: 17px;
-            height: 17px;
+            padding: .4rem;
+            width: 14px;
+            height: 14px;
         }
 
         &:hover {
@@ -124,5 +130,5 @@ $font-p: 0.82rem;
     visibility: hidden;
     opacity: 0;
     top: -100%;
-    transition: all 1s cubic-bezier(.16,.84,.37,.64);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }

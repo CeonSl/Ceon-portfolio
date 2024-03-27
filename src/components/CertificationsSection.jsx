@@ -104,7 +104,6 @@ function CertificationsSection() {
               nextCardId,
               currentCardId,
             });
-            console.log(certification);
             return (
               <Certification
                 key={certification.id}
