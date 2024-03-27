@@ -104,6 +104,7 @@ function CertificationsSection() {
               nextCardId,
               currentCardId,
             });
+            console.log(certification);
             return (
               <Certification
                 key={certification.id}
@@ -112,7 +113,7 @@ function CertificationsSection() {
                 company={certification.company}
                 title={certification.title}
                 img={certification.img}
-                imgSmall={certification.imgSmall}
+                smallImg={certification.smallImg}
                 urlLinkedIn={certification.url}
                 setToggleViewer={setToggleViewer}
               />

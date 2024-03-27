@@ -1,9 +1,10 @@
+import { useState } from "react";
 import Expand from "./icons/Expand";
 import Redirect from "./icons/Redirect";
 
 function Certification({
   img,
-  imgSmall,
+  smallImg,
   title,
   company,
   date,
@@ -11,6 +12,8 @@ function Certification({
   classNameForShowingCard,
   setToggleViewer,
 }) {
+  const [loaded, setLoaded] = useState(false);
+
   const handleOpenViewer = () => {
     setToggleViewer(true);
   };
@@ -19,14 +22,17 @@ function Certification({
     <>
       <div className={`container-certification ${classNameForShowingCard}`}>
         <div
-          className="container-img-certification"
-          style={{ backgroundImage: `url("${imgSmall}")` }}
+          className={`container-img-certification ${
+            loaded ? "show-img" : "hide-img"
+          }`}
+          style={{ backgroundImage: `url("${smallImg}")` }}
         >
           <img
             src={img}
             alt={`certificado de ${title}`}
             title={`certificado de ${title}`}
             onClick={() => handleOpenViewer()}
+            onLoad={() => setLoaded(true)}
           />
         </div>
         <div className="container-texts-buttons">
