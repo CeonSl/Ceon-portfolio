@@ -5,9 +5,9 @@ function MainSectionPhotoInfoAndButtons() {
     <div className="container-img-text">
       <MainSectionContainerImg />
       <div className="container-text">
-        <h3>
+        <h1>
           Soy <span>Carlos Oropeza</span>,
-        </h3>
+        </h1>
         <h2>Full Stack Web Developer</h2>
         <p>
           Entusiasmado en adquirir <span>nuevos conocimientos</span> y{" "}

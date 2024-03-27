@@ -5,10 +5,10 @@ function Toast({ showToast }) {
     <div
       className={`container-toast ${showToast ? "show-toast" : "hide-toast"}`}
     >
-      <h6 className="message-toast">
+      <h3 className="message-toast">
         <Check />
         ¡Mensaje enviado!
-      </h6>
+      </h3>
     </div>
   );
 }

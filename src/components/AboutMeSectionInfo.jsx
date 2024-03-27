@@ -1,13 +1,13 @@
 function AboutMeSectionInfo() {
   return (
-    <div className="">
+    <div>
       <p>
         El desarrollo web ha sido durante los últimos 2 años mi pasión, por lo
         que he mantenido un <span>aprendizaje continuo</span> considerando
         diferentes puntos como:{" "}
         <span>El aprendizaje de patrones de diseño</span>,
-        <span> arquitecturas de software </span>,
-        <span>lenguajes de programación </span>, <span>frameworks </span>,{" "}
+        <span> arquitecturas de software</span>,
+        <span> lenguajes de programación</span>,<span> frameworks</span>,{" "}
         <span>sistemas de gestión de bases de datos </span>,{" "}
         <span>configuración de dominios </span> y <span>hostings</span>.
       </p>
@@ -21,5 +21,4 @@ function AboutMeSectionInfo() {
     </div>
   );
 }
-
 export default AboutMeSectionInfo;

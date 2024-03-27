@@ -1,4 +1,4 @@
-$font-h3: 2rem;
+$font-h1: 2rem;
 $font-title: 3rem;
 $border-color:#33333388;
 $background-color: #24242B;
@@ -57,20 +57,20 @@ $font-p: 0.82rem;
                 width: 100%;
             }
 
-            h3,h2,p {
+            h1,h2,p {
                 margin: 0;
                 padding: 0;
             }
     
-            h3 {
-                font-size: $font-h3;
+            h1 {
+                font-size: $font-h1;
                 font-weight: 100;
                 @include tablet() {
-                    font-size: calc($font-h3/1.1);
+                    font-size: calc($font-h1/1.1);
                 }
 
                 @include mobile() {
-                    font-size: calc($font-h3/1.5);
+                    font-size: calc($font-h1/1.5);
                 }
             }
     

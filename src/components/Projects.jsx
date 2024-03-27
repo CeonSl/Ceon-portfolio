@@ -16,15 +16,15 @@ const Projects = () => {
         >
           <div className="container-nextjs">
             <NextJs />
-            <h6>Next.js</h6>
+            <h4>Next.js</h4>
           </div>
           <div className="container-css">
             <Css />
-            <h6>CSS</h6>
+            <h4>CSS</h4>
           </div>
           <div className="container-html">
             <Html />
-            <h6>HTML</h6>
+            <h4>HTML</h4>
           </div>
         </Project>
       </div>

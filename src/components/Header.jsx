@@ -15,9 +15,9 @@ function Header({ isIntersecting }) {
             <li>
               <a href="#contact-me">Contáctame</a>
             </li>
-            <div>
+            <li className="container-go-back-top-li">
               <GoBackTop isIntersecting={isIntersecting} />
-            </div>
+            </li>
           </ul>
         </div>
       </div>

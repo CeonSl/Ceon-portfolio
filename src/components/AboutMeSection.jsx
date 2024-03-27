@@ -1,7 +1,6 @@
 import AboutMeSectionInfo from "./AboutMeSectionInfo";
 import AboutMeSectionPhotos from "./AboutMeSectionPhotos";
 import Person from "./icons/Person";
-
 function AboutMeSection() {
   return (
     <>
@@ -18,5 +17,4 @@ function AboutMeSection() {
     </>
   );
 }
-
 export default AboutMeSection;

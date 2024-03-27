@@ -5,7 +5,10 @@ import { certifications } from "../data/certifications";
 import { useState } from "react";
 import { selectTypeCard } from "../assets/js/logic/selectTypeCard";
 import CertificationsViewer from "./CertificationsViewer";
-import { useEffect } from "react";
+import useHandleLeftCard from "./hooks/useHandleLeftCard.jsx";
+import useHandleRightCard from "./hooks/useHandleRightCard.jsx";
+import useHandleCloseViewer from "./hooks/useHandleCloseViewer.jsx";
+import ControlsArrowResponsive from "./ControlsArrowResponsive.jsx";
 
 function CertificationsSection() {
   const [currentCardId, setCurrentCardId] = useState(1);
@@ -13,67 +16,21 @@ function CertificationsSection() {
   const [nextCardId, setNextCardId] = useState(2);
   const [toggleViewer, setToggleViewer] = useState(false);
 
-  useEffect(() => {
-    const handleClick = (e) => {
-      if (e.target.tagName != "IMG" && e.target.tagName != "BUTTON") {
-        setToggleViewer(false);
-      }
-    };
+  const { handleLeftCard } = useHandleLeftCard({
+    currentCardId,
+    setCurrentCardId,
+    setNextCardId,
+    setPreviousCardId,
+  });
 
-    if (!toggleViewer) {
-      document.removeEventListener("click", handleClick);
-    } else {
-      document.addEventListener("click", handleClick);
-    }
+  const { handleRightCard } = useHandleRightCard({
+    currentCardId,
+    setCurrentCardId,
+    setNextCardId,
+    setPreviousCardId,
+  });
 
-    return () => {
-      document.removeEventListener("click", handleClick);
-    };
-  }, [toggleViewer]);
-
-  const handleLeftCard = () => {
-    let newCurrentCardId = 0;
-    let newPreviousCardId = 0;
-    let newNextCardId = 0;
-
-    if (currentCardId - 1 < 1) {
-      newCurrentCardId = certifications.length;
-      newPreviousCardId = certifications.length - 1;
-      newNextCardId = 1;
-    } else {
-      newCurrentCardId = currentCardId - 1;
-      newPreviousCardId =
-        newCurrentCardId - 1 == 0
-          ? certifications.length
-          : newCurrentCardId - 1;
-      newNextCardId = newCurrentCardId + 1;
-    }
-
-    setCurrentCardId(newCurrentCardId);
-    setPreviousCardId(newPreviousCardId);
-    setNextCardId(newNextCardId);
-  };
-
-  const handleRightCard = () => {
-    let newCurrentCardId = 0;
-    let newPreviousCardId = 0;
-    let newNextCardId = 0;
-
-    if (currentCardId + 1 > certifications.length) {
-      newCurrentCardId = 1;
-      newPreviousCardId = certifications.length;
-      newNextCardId = 2;
-    } else {
-      newCurrentCardId = currentCardId + 1;
-      newPreviousCardId = newCurrentCardId - 1;
-      newNextCardId =
-        newCurrentCardId + 1 > certifications.length ? 1 : newCurrentCardId + 1;
-    }
-
-    setCurrentCardId(newCurrentCardId);
-    setPreviousCardId(newPreviousCardId);
-    setNextCardId(newNextCardId);
-  };
+  useHandleCloseViewer({ setToggleViewer, toggleViewer });
 
   return (
     <section className="container-certifications">
@@ -89,6 +46,8 @@ function CertificationsSection() {
       </h2>
       <div className="certifications">
         <button
+          id="arrow-left"
+          aria-label="arrow-left"
           className="arrow-left"
           onClick={() => {
             handleLeftCard();
@@ -120,6 +79,8 @@ function CertificationsSection() {
           })}
         </div>
         <button
+          id="arrow-right"
+          aria-label="arrow-right"
           className="arrow-right"
           onClick={() => {
             handleRightCard();
@@ -127,24 +88,10 @@ function CertificationsSection() {
         >
           <Arrow />
         </button>
-        <div className="container-controls-arrow-responsive">
-          <button
-            className="arrow-left"
-            onClick={() => {
-              handleLeftCard();
-            }}
-          >
-            <Arrow />
-          </button>
-          <button
-            className="arrow-right"
-            onClick={() => {
-              handleRightCard();
-            }}
-          >
-            <Arrow />
-          </button>
-        </div>
+        <ControlsArrowResponsive
+          handleLeftCard={handleLeftCard}
+          handleRightCard={handleRightCard}
+        />
       </div>
     </section>
   );

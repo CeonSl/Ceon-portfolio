@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Expand from "./icons/Expand";
 import Redirect from "./icons/Redirect";
+import { handleOpenViewer } from "./logic/handleOpenViewer";
 
 function Certification({
   img,
@@ -13,10 +14,6 @@ function Certification({
   setToggleViewer,
 }) {
   const [loaded, setLoaded] = useState(false);
-
-  const handleOpenViewer = () => {
-    setToggleViewer(true);
-  };
 
   return (
     <>
@@ -31,7 +28,7 @@ function Certification({
             src={img}
             alt={`certificado de ${title}`}
             title={`certificado de ${title}`}
-            onClick={() => handleOpenViewer()}
+            onClick={() => handleOpenViewer(setToggleViewer)}
             onLoad={() => setLoaded(true)}
           />
         </div>
@@ -42,7 +39,7 @@ function Certification({
             <span className="date-certification">{date}</span>
           </div>
           <div className="container-buttons">
-            <button onClick={() => handleOpenViewer()}>
+            <button onClick={() => handleOpenViewer(setToggleViewer)}>
               <Expand /> Certificado
             </button>
             <a href={urlLinkedIn} target="_blank" rel="noreferrer">
