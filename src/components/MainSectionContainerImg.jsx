@@ -8,6 +8,7 @@ const MainSectionContainerImg = () => {
         src={`${ceonImg}`}
         alt="Carlos Oropeza foto"
         title="Carlos Oropeza foto"
+        loading="lazy"
       />
     </div>
   );

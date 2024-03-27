@@ -10,6 +10,7 @@ function AboutMeSectionPhotos() {
           alt="Carlos Oropeza foto 2"
           title="Carlos Oropeza foto 2"
           onLoad={() => setLoaded(true)}
+          loading="lazy"
         />
       </div>
     </>

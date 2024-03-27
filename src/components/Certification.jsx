@@ -30,6 +30,7 @@ function Certification({
             title={`certificado de ${title}`}
             onClick={() => handleOpenViewer(setToggleViewer)}
             onLoad={() => setLoaded(true)}
+            loading="lazy"
           />
         </div>
         <div className="container-texts-buttons">
