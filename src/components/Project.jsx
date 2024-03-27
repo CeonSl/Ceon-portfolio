@@ -17,7 +17,7 @@ function Project({ projectTitle, text, videoSrc, link = "", children }) {
           <div className="project-technologies">{children}</div>
         </aside>
         <div className="project-video-container">
-          <video muted loop playsInline autoPlay>
+          <video muted loop playsInline preload="auto" autoPlay>
             <source src={videoSrc} type="video/mp4" />
           </video>
         </div>
