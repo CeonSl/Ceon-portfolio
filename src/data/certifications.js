@@ -11,6 +11,19 @@ import CCNAv7Introduction from "../imgs/Certificado Introduccion.webp";
 import Seguridad from "../imgs/Certificado Seguridad.webp";
 import Python from "../imgs/Certificado Python.webp";
 
+import HackathonSmall from "../imgs/Certificado HACKATHON small.webp";
+import ExpoworkSmall from "../imgs/Certificado Expowork small.webp";
+import HelpdeskSmall from "../imgs/Certificado Help Desk small.webp";
+import TypeScriptSmall from "../imgs/Certificado TypeScript small.webp";
+import JavascriptSmall from "../imgs/Certificado Javascript small.webp";
+import ResponsiveSmall from "../imgs/Certificado Responsive small.webp";
+import CCNAv7SwitchingSmall from "../imgs/Certificado CCNAv7 Switching small.webp";
+import CCNAv7RedesSmall from "../imgs/Certificado CCNAv7 Redes small.webp";
+import CyberOpsSmall from "../imgs/Certificado CyberOps small.webp";
+import CCNAv7IntroductionSmall from "../imgs/Certificado Introduccion small.webp";
+import SeguridadSmall from "../imgs/Certificado Seguridad small.webp";
+import PythonSmall from "../imgs/Certificado Python small.webp";
+
 export const certifications = [
   {
     id: "1",
@@ -18,6 +31,7 @@ export const certifications = [
     company: "Universidad César Vallejo",
     title: "Primer lugar en evento HACKATHÓN",
     img: Hackathon,
+    smallImg: HackathonSmall,
     url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710446379869/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
   },
   {
@@ -26,6 +40,7 @@ export const certifications = [
     company: "Universidad César Vallejo",
     title: "Tercer Lugar en evento Expowork 2023-1",
     img: Expowork,
+    smallImg: ExpoworkSmall,
     url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710443835510/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
   },
   {
@@ -34,6 +49,7 @@ export const certifications = [
     company: "Universidad César Vallejo",
     title: "Asistente de Help Desk",
     img: Helpdesk,
+    smallImg: HelpdeskSmall,
     url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710444389027/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
   },
   {
@@ -42,6 +58,7 @@ export const certifications = [
     company: "Udemy",
     title: "TypeScript sin fronteras: guía definitiva",
     img: TypeScript,
+    smallImg: TypeScriptSmall,
     url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710442896703/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
   },
   {
@@ -50,6 +67,7 @@ export const certifications = [
     company: "Udemy",
     title: "Aprende Javascript ES9, HTML, CSS3 y NodeJS desde cero",
     img: Javascript,
+    smallImg: JavascriptSmall,
     url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710442937830/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
   },
   {
@@ -58,6 +76,7 @@ export const certifications = [
     company: "freeCodeCamp",
     title: "Responsive Web Design",
     img: Responsive,
+    smallImg: ResponsiveSmall,
     url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710483963868/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
   },
   {
@@ -66,6 +85,7 @@ export const certifications = [
     company: "Cisco Networking Academy",
     title: "CCNAv7: Switching, Routing and Wireless Essentials",
     img: CCNAv7Switching,
+    smallImg: CCNAv7SwitchingSmall,
     url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710994931792/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
   },
   {
@@ -74,6 +94,7 @@ export const certifications = [
     company: "Cisco Networking Academy",
     title: "CCNAv7: Redes empresariales, Seguridad y Automatización",
     img: CCNAv7Redes,
+    smallImg: CCNAv7RedesSmall,
     url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710995050294/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
   },
   {
@@ -82,6 +103,7 @@ export const certifications = [
     company: "Cisco Networking Academy",
     title: "CyberOps Associate",
     img: CyberOps,
+    smallImg: CyberOpsSmall,
     url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710995108368/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
   },
   {
@@ -90,6 +112,7 @@ export const certifications = [
     company: "Cisco Networking Academy",
     title: "CCNAv7: Introducción a Redes",
     img: CCNAv7Introduction,
+    smallImg: CCNAv7IntroductionSmall,
     url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710994762150/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
   },
   {
@@ -98,6 +121,7 @@ export const certifications = [
     company: "Cisco Networking Academy",
     title: "Introducción a la Seguridad Cibernética",
     img: Seguridad,
+    smallImg: SeguridadSmall,
     url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710994863428/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
   },
   {
@@ -106,6 +130,7 @@ export const certifications = [
     company: "OpenEDG Python Institute",
     title: "PCAP: Programming Essentials in Python",
     img: Python,
+    smallImg: PythonSmall,
     url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710994633016/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
   },
 ];

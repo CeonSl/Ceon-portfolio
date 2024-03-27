@@ -112,6 +112,7 @@ function CertificationsSection() {
                 company={certification.company}
                 title={certification.title}
                 img={certification.img}
+                imgSmall={certification.imgSmall}
                 urlLinkedIn={certification.url}
                 setToggleViewer={setToggleViewer}
               />
