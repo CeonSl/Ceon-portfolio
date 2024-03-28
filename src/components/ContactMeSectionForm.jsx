@@ -18,7 +18,7 @@ function ContactMeSectionForm() {
       To: "ceon20020508@gmail.com",
       From: "ceon20020508@gmail.com",
       Subject: `${subject}`,
-      Body: `Mensaje de ${name}: ${message}. Correo de contacto: ${email}.`,
+      Body: ` Correo de contacto: ${email}.<br/> Mensaje de ${name}: ${message}.`,
     })
       .then((messageResponse) => {
         console.log(messageResponse);
