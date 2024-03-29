@@ -1,7 +1,7 @@
 {
     "Header": {
         "Projects": "Proyectos",
-        "About Me": "Sobre mi",
+        "About Me": "Sobre mí",
         "Contact Me": "Contáctame"
     },
     "First Text": "Soy ",
@@ -17,7 +17,7 @@
         "Contact Me": "Contáctame"
     },
     "Projects Section": {
-        "Title": "¿Que he realizado?",
+        "Title": "¿Qué he realizado?",
         "First Project": {
             "Title": "Landing Page - Agencia 28Siete",
             "Description": "Desarrollé una Landing Page para la agencia de publicidad 28Siete, la cual fue desarrollada utilizando NextJs."
@@ -67,7 +67,7 @@
         "Button Expand": "Certificado"
     },
     "About Me Section": {
-        "Title": "Sobre mi",
+        "Title": "Sobre mí",
         "Paragraphs": {
             "First": {
                 "First Part": "El desarrollo web ha sido durante los últimos 2 años mi pasión, por lo que he mantenido un ",
@@ -92,7 +92,7 @@
         }
     }, 
     "Contact Me Section": {
-        "Title": "¡Contáctame conmigo!",
+        "Title": "¡Contáctame!",
         "Form": {
             "Name": {
                 "Title": "Nombre",

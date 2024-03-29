@@ -20,6 +20,7 @@ $background-color-hovered: #44444433;
 .container-contact-me {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 4rem;
     margin-bottom: 6rem;
 
@@ -74,7 +75,7 @@ $background-color-hovered: #44444433;
 
             input,textarea {
                 max-width: 495px;
-                min-width: 495px;
+                min-width: 100%;
                 border: none;
                 background-color: transparent;
                 padding: .7rem;
