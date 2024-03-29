@@ -1,16 +1,10 @@
-import { useState } from "react";
 import Translate from "./icons/Translate";
 import { useTranslation } from "react-i18next";
 
 function ButtonChangeLanguange() {
-  const [openLanguages, setOpenLanguages] = useState(false);
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
   console.log(currentLang);
-
-  const handleChangeState = () => {
-    setOpenLanguages(!openLanguages);
-  };
 
   const handleChangeToSpanish = () => {
     i18n.changeLanguage("es");
@@ -21,12 +15,7 @@ function ButtonChangeLanguange() {
   };
 
   return (
-    <div
-      className={`change-language ${
-        openLanguages ? "" : "container-just-button"
-      }`}
-      onClick={() => handleChangeState()}
-    >
+    <div className="change-language">
       <ul>
         <li>
           <button>

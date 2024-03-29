@@ -154,33 +154,31 @@ $font-p: 0.82rem;
     transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.container-just-button {
-    height: 45.5px !important;
-    transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
-
-    @include mobile() {
-        height: 35px !important;
-    }
-
-
-}
-
 .change-language {
     position: absolute;
     color: #fff;
     background-color: $background-color;
     border-radius: 15px;
     border: 1px solid $border-color;
-    height: 135px;
+    height: 45.5px ;
+
     overflow: hidden;
     left: -24.5%;
     top: 3%;
     transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     @include mobile() {
-        height: 112px;
+        height: 35px;
         left: -18.5%;
         top: 6%;
+    }
+
+    &:hover {
+        height: 135px !important;
+    
+        @include mobile() {
+            height: 112px  !important;
+        }
     }
 
     ul {
