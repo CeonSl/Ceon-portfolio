@@ -1,6 +1,5 @@
-import { certifications } from "../../data/certifications";
-
 function handleRightCard({
+  certifications,
   currentCardId,
   setCurrentCardId,
   setPreviousCardId,

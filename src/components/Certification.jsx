@@ -2,6 +2,7 @@ import { useState } from "react";
 import Expand from "./icons/Expand";
 import Redirect from "./icons/Redirect";
 import { handleOpenViewer } from "./logic/handleOpenViewer";
+import { useTranslation } from "react-i18next";
 
 function Certification({
   img,
@@ -14,6 +15,7 @@ function Certification({
   setToggleViewer,
 }) {
   const [loaded, setLoaded] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -41,7 +43,7 @@ function Certification({
           </div>
           <div className="container-buttons">
             <button onClick={() => handleOpenViewer(setToggleViewer)}>
-              <Expand /> Certificado
+              <Expand /> {t("Certifications Section.Button Expand")}
             </button>
             <a href={urlLinkedIn} target="_blank" rel="noreferrer">
               <Redirect />

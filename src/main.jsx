@@ -12,6 +12,7 @@ import "./scss/certificationsSectionStyles.scss";
 import "./scss/certificationViewerStyles.scss";
 import "./scss/toastStyles.scss";
 import "./index.scss";
+import "./assets/i18n.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

@@ -6,10 +6,13 @@ import Check from "./icons/Check.jsx";
 import Copy from "./icons/Copy.jsx";
 import { handleCopyEmail } from "./logic/handleCopyEmail.jsx";
 import ButtonAnchorDocs from "./ButtonAnchorDocs.jsx";
+import { useTranslation } from "react-i18next";
 
 const ButtonsSocialMediaResume = () => {
   const [downloadResume, setDownloadResume] = useState(false);
   const [copied, setCopied] = useState(false);
+
+  const { t } = useTranslation();
 
   return (
     <ul>
@@ -40,7 +43,7 @@ const ButtonsSocialMediaResume = () => {
             url={
               "https://mail.google.com/mail/?view=cm&source=mailto&to=ceon20020508@gmail.com"
             }
-            text={"Contáctame"}
+            text={t("Buttons.Contact Me")}
             icon={<Mail />}
           />
           <div onClick={() => handleCopyEmail(setCopied)} className="">

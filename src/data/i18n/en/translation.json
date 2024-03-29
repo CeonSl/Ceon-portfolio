@@ -1,0 +1,119 @@
+{
+    "Header": {
+        "Projects": "Projects",
+        "About Me": "About me",
+        "Contact Me": "Contact me"
+    },
+    "First Text": "I'm ",
+    "Main Profesion": "Full Stack Web Developer",
+    "Main Text": {
+        "First Part": "Enthusiastic about acquiring ",
+        "Second Part": "new knowledge",
+        "Third Part": "and ",
+        "Fourth Part": "experience",
+        "Fifth Part": " in the world of web development."
+    },
+    "Buttons": {
+        "Contact Me": "Contact me"
+    },
+    "Projects Section": {
+        "Title": "What have I done?",
+        "First Project": {
+            "Title": "Landing Page - Agency 28Siete",
+            "Description": "I developed a Landing Page for the advertising agency 28Siete, which was developed using NextJs.",
+            "Button Text": "See more"
+        }
+    },
+    "Certifications Section": {
+        "Title": "Certificaciones",
+        "Certifications": {
+            "First Certification": {
+                "Date": "June"
+            },
+            "Second Certification": {
+                "Date": "July"
+            },
+            "Third Certification": {
+                "Date": "November"
+            },
+            "Fourth Certification": {
+                "Date": "February"
+            },
+            "Fifth Certification": {
+                "Date": "January"
+            },
+            "Sixth Certification": {
+                "Date": "February"
+            },
+            "Seventh Certification": {
+                "Date": "March"
+            },
+            "Eighth Certification": {
+                "Date": "September"
+            },
+            "Ninth Certification": {
+                "Date": "March"
+            },
+            "Tenth Certification": {
+                "Date": "September"
+            },
+            "Eleventh Certification": {
+                "Date": "March"
+            },
+            "Twelfth Certification": {
+                "Date": "August"
+            }
+        },
+        "Button Expand": "Certification"
+    },
+    "About Me Section": {
+        "Title": "Sobre mi",
+        "Paragraphs": {
+            "First": {
+                "First Part": "Web development has been for the last 2 years my passion, so I have maintained a ",
+                "Second Part": "continuous learning ",
+                "Third Part": "considering different points such as: ",
+                "Fourth Part": "Learning design patterns",
+                "Fifth Part": " software architectures",
+                "Sixth Part": " programming languages",
+                "Seventh Part": " frameworks",
+                "Eighth Part": " database management systems",
+                "Ninth Part": " domain configuration and hosting"
+            },
+            "Second": {
+                "First Part": "In this way, allowing the Full Stack development of a web solution while using ",
+                "Second Part": "best practices ",
+                "Third Part": "that refer to the use of software that allows ",
+                "Fourth Part": "controlling code versions ",
+                "Fifth Part": "and design focused on ",
+                "Sixth Part": "scalability and maintainability ",
+                "Seventh Part": "of systems." 
+            }
+        }
+    }, 
+    "Contact Me Section": {
+        "Title": "Contact Me!",
+        "Form": {
+            "Name": {
+                "Title": "Name",
+                "Placeholder": "First Name Last Name..."
+            },
+            "Email": {
+                "Title": "Email",
+                "Placeholder": "email1234@gmail.com..."
+            },
+            "Subject": {
+                "Title": "Subject",
+                "Placeholder": "Labor proposal..."
+            },
+            "Message": {
+                "Title": "Message",
+                "Placeholder": "I would be interested in working with..."
+            }
+        },
+        "Button": "Send message"
+    },
+    "Footer Section": {
+        "Left Part": "Portfolio 2024 | Designed by Ceon."
+    }
+}

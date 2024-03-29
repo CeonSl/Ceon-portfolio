@@ -1,7 +1,6 @@
 import Certification from "./Certification";
 import Medallist from "./icons/Medallist";
 import Arrow from "./icons/Arrow.jsx";
-import { certifications } from "../data/certifications";
 import { useState } from "react";
 import { selectTypeCard } from "../assets/js/logic/selectTypeCard";
 import CertificationsViewer from "./CertificationsViewer";
@@ -9,14 +8,19 @@ import useHandleLeftCard from "./hooks/useHandleLeftCard.jsx";
 import useHandleRightCard from "./hooks/useHandleRightCard.jsx";
 import useHandleCloseViewer from "./hooks/useHandleCloseViewer.jsx";
 import ControlsArrowResponsive from "./ControlsArrowResponsive.jsx";
+import CertificationsData from "../data/CertificationsData.jsx";
+import { useTranslation } from "react-i18next";
 
 function CertificationsSection() {
+  const { certifications } = CertificationsData();
+
   const [currentCardId, setCurrentCardId] = useState(1);
   const [previousCardId, setPreviousCardId] = useState(certifications.length);
   const [nextCardId, setNextCardId] = useState(2);
   const [toggleViewer, setToggleViewer] = useState(false);
 
   const { handleLeftCard } = useHandleLeftCard({
+    certifications,
     currentCardId,
     setCurrentCardId,
     setNextCardId,
@@ -24,6 +28,7 @@ function CertificationsSection() {
   });
 
   const { handleRightCard } = useHandleRightCard({
+    certifications,
     currentCardId,
     setCurrentCardId,
     setNextCardId,
@@ -31,6 +36,7 @@ function CertificationsSection() {
   });
 
   useHandleCloseViewer({ setToggleViewer, toggleViewer });
+  const { t } = useTranslation();
 
   return (
     <section className="container-certifications">
@@ -42,7 +48,7 @@ function CertificationsSection() {
       />
       <h2>
         <Medallist />
-        Certificaciones
+        {t("Certifications Section.Title")}
       </h2>
       <div className="certifications">
         <button
