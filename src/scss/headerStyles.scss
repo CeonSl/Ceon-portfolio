@@ -154,78 +154,88 @@ $font-p: 0.82rem;
     transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.change-language {
-    position: absolute;
-    left: -24.5%;
-    color: #fff;
-    top: 0;
-    display: flex;
-    align-items: start;
-    height: 100%;
-    font-size: 17px;
+.container-just-button {
+    height: 45.5px !important;
+    transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     @include mobile() {
-        font-size: 14px;
-        left: -18%;
+        height: 35px !important;
     }
 
-    button {
-        border: none;
-        background-color: transparent;
-        padding: 0;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        svg {
-            width: 17px;
-            height: 17px;
+}
 
-            @include mobile() {
-                width: 14px;
-                height: 14px;
-            }
-        }
+.change-language {
+    position: absolute;
+    color: #fff;
+    background-color: $background-color;
+    border-radius: 15px;
+    border: 1px solid $border-color;
+    height: 135px;
+    overflow: hidden;
+    left: -24.5%;
+    top: 3%;
+    transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    @include mobile() {
+        height: 112px;
+        left: -18.5%;
+        top: 6%;
     }
 
     ul {
         list-style: none;
         margin: 0;
         padding: 0;
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        margin-top: .15rem;
-        transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        background-color: $background-color;
-
+        
         li {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            background-color: $background-color;
-            padding: .5rem !important;
             cursor: pointer;
-            z-index: 20;
-            border-bottom: 1px solid $border-color;
-            transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            padding: .8rem !important;
 
             @include mobile() {
-                padding: .2rem !important;
+                padding: .6rem !important;
             }
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid $border-color;
             
-            &:first-child {
+
+            &:nth-child(1) {
                 border-radius: 15px 15px 0 0;
             }
 
-            &:last-child {
-                border-radius: 0 0 15px 15px ;
+            &:nth-child(3) {
+                border-bottom: none;
+                border-radius: 0 0 15px 15px;
+            }
+            
+
+            button {
                 border: none;
+                background: transparent;
+                padding: 0;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                @include mobile() {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            p {
+                margin: 0;
+                font-size: 20px;
+                @include mobile() {
+                    font-size: 16px;
+                }
             }
 
             &:hover {
@@ -233,34 +243,5 @@ $font-p: 0.82rem;
             }
         }
 
-        .just-button {
-            border-radius: 15px !important;
-            border: 1px solid $border-color !important;
-        }
-
-
-    }
-
-    .all-buttons {
-        transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
-
-        li:not(:nth-child(1)) {
-            @include keyframes(fade-in-emoji) {
-                from {
-                    opacity: 0;
-                    display: none;
-                }
-    
-
-                50% {
-                    display: flex;
-                }
-
-                to {
-                    opacity: 1;
-                }
-            }
-            @include animate(fade-in-emoji, 1000ms, cubic-bezier(0.165, 0.84, 0.44, 1), 1)
-        }
     }
 }

@@ -21,23 +21,24 @@ function ButtonChangeLanguange() {
   };
 
   return (
-    <div className="change-language" onClick={() => handleChangeState()}>
-      <ul className={`${openLanguages == false ? "" : "all-buttons"}`}>
-        <li className={`${openLanguages == false ? "just-button" : ""}`}>
+    <div
+      className={`change-language ${
+        openLanguages ? "" : "container-just-button"
+      }`}
+      onClick={() => handleChangeState()}
+    >
+      <ul>
+        <li>
           <button>
             <Translate />
           </button>
         </li>
-        {openLanguages && (
-          <>
-            <li onClick={() => handleChangeToSpanish()}>
-              <p>🇪🇸</p>
-            </li>
-            <li onClick={() => handleChangeToEnglish()}>
-              <p>🇺🇸</p>
-            </li>
-          </>
-        )}
+        <li onClick={() => handleChangeToSpanish()}>
+          <p>🇪🇸</p>
+        </li>
+        <li onClick={() => handleChangeToEnglish()}>
+          <p>🇺🇸</p>
+        </li>
       </ul>
     </div>
   );
