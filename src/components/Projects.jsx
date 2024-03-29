@@ -3,15 +3,18 @@ import Project from "./Project";
 import NextJs from "./icons/NextJs";
 import Css from "./icons/Css";
 import Html from "./icons/Html";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="container-all-projects">
         <Project
-          projectTitle={"Landing Page - Agencia 28Siete"}
+          projectTitle={t("Projects Section.First Project.Title")}
           videoSrc={page28Siete}
-          text={`Desarrollé una Landing Page para la agencia de publicidad 28Siete, la cual fue desarrollada utilizando NextJs.`}
+          text={t("Projects Section.First Project.Description")}
           link="https://agencia28.com"
         >
           <div className="container-nextjs">

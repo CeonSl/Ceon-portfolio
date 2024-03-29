@@ -42,5 +42,16 @@ $font-p: 0.82rem;
                 color: #aaa;
             }   
         }
+        
+        h4 {
+            a {
+                text-decoration: none;
+                color: #fff;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 }

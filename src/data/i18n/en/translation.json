@@ -20,12 +20,12 @@
         "Title": "What have I done?",
         "First Project": {
             "Title": "Landing Page - Agency 28Siete",
-            "Description": "I developed a Landing Page for the advertising agency 28Siete, which was developed using NextJs.",
-            "Button Text": "See more"
-        }
+            "Description": "I developed a Landing Page for the advertising agency 28Siete, which was developed using NextJs."
+        },
+        "Button Text": "See more"
     },
     "Certifications Section": {
-        "Title": "Certificaciones",
+        "Title": "Certifications",
         "Certifications": {
             "First Certification": {
                 "Date": "June"
@@ -67,7 +67,7 @@
         "Button Expand": "Certification"
     },
     "About Me Section": {
-        "Title": "Sobre mi",
+        "Title": "About Me",
         "Paragraphs": {
             "First": {
                 "First Part": "Web development has been for the last 2 years my passion, so I have maintained a ",
@@ -109,11 +109,12 @@
             "Message": {
                 "Title": "Message",
                 "Placeholder": "I would be interested in working with..."
-            }
-        },
-        "Button": "Send message"
+            },
+            "Button": "Send message"
+        }
     },
     "Footer Section": {
-        "Left Part": "Portfolio 2024 | Designed by Ceon."
+        "Left Part": "Portfolio 2024 | Designed by Ceon.",
+        "Right Part": "View repository"
     }
 }

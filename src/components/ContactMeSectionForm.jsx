@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SendMessage from "./icons/SendMessage";
 import Toast from "./Toast";
+import { useTranslation } from "react-i18next";
 function ContactMeSectionForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -36,41 +37,43 @@ function ContactMeSectionForm() {
     setMessage("");
   };
 
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="container-form">
         <Toast showToast={showToast} />
         <form className="form" onSubmit={handleSubmitMessage}>
-          <label>Nombre</label>
+          <label>{t("Contact Me Section.Form.Name.Title")}</label>
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Nombre Apellido..."
+            placeholder={t("Contact Me Section.Form.Name.Placeholder")}
           />
-          <label>Correo</label>
+          <label>{t("Contact Me Section.Form.Email.Title")}</label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="correo1234@gmail.com..."
+            placeholder={t("Contact Me Section.Form.Email.Placeholder")}
           />
-          <label>Asunto</label>
+          <label>{t("Contact Me Section.Form.Subject.Title")}</label>
           <input
             type="text"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            placeholder="Propuesta laboral..."
+            placeholder={t("Contact Me Section.Form.Subject.Placeholder")}
           />
-          <label>Mensaje</label>
+          <label>{t("Contact Me Section.Form.Message.Title")}</label>
           <textarea
-            placeholder="Me interesaría que trab...."
+            placeholder={t("Contact Me Section.Form.Message.Placeholder")}
             rows={12}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
           <button type="submit">
-            <SendMessage /> Enviar mensaje
+            <SendMessage /> {t("Contact Me Section.Form.Button")}
           </button>
         </form>
       </div>

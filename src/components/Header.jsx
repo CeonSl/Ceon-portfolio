@@ -1,3 +1,4 @@
+import ButtonChangeLanguange from "./ButtonChangeLanguange";
 import GoBackTop from "./icons/GoBackTop";
 import { useTranslation } from "react-i18next";
 
@@ -9,6 +10,9 @@ function Header({ isIntersecting }) {
       <div className="container-header-main">
         <div className="container-header">
           <ul className="container-nav">
+            <li className="container-change-language">
+              <ButtonChangeLanguange />
+            </li>
             <li>
               <a href="#projects">{t("Header.Projects")}</a>
             </li>

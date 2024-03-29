@@ -20,9 +20,9 @@
         "Title": "¿Que he realizado?",
         "First Project": {
             "Title": "Landing Page - Agencia 28Siete",
-            "Description": "Desarrollé una Landing Page para la agencia de publicidad 28Siete, la cual fue desarrollada utilizando NextJs.",
-            "Button Text": "Saber más"
-        }
+            "Description": "Desarrollé una Landing Page para la agencia de publicidad 28Siete, la cual fue desarrollada utilizando NextJs."
+        },
+        "Button Text": "Saber más"
     },
     "Certifications Section": {
         "Title": "Certificaciones",
@@ -66,7 +66,7 @@
         },
         "Button Expand": "Certificado"
     },
-    "About Me": {
+    "About Me Section": {
         "Title": "Sobre mi",
         "Paragraphs": {
             "First": {
@@ -91,7 +91,7 @@
             }
         }
     }, 
-    "Contact Me": {
+    "Contact Me Section": {
         "Title": "¡Contáctame conmigo!",
         "Form": {
             "Name": {
@@ -109,11 +109,12 @@
             "Message": {
                 "Title": "Mensaje",
                 "Placeholder": "Me interesaría que trab..."
-            }
-        },
-        "Button": "Enviar mensaje"
+            },
+            "Button": "Enviar mensaje"
+        }
     },
     "Footer Section": {
-        "Left Part": "Portfolio 2024 | Designed by Ceon."
+        "Left Part": "Portafolio 2024 | Diseñado por Ceon.",
+        "Right Part": "Ver repositorio"
     }
 }

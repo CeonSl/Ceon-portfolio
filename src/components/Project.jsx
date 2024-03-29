@@ -1,5 +1,7 @@
+import { useTranslation } from "react-i18next";
 import KnowMore from "./icons/KnowMore";
 function Project({ projectTitle, text, videoSrc, link = "", children }) {
+  const { t } = useTranslation();
   return (
     <>
       <section className="container-project">
@@ -10,7 +12,7 @@ function Project({ projectTitle, text, videoSrc, link = "", children }) {
             {link != "" && (
               <a href={link} target="_blank" rel="noreferrer">
                 <KnowMore />
-                Saber más
+                {t("Projects Section.Button Text")}
               </a>
             )}
           </div>

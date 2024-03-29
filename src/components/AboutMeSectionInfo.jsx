@@ -1,22 +1,28 @@
+import { useTranslation } from "react-i18next";
+
 function AboutMeSectionInfo() {
+  const { t } = useTranslation();
   return (
     <div>
       <p>
-        El desarrollo web ha sido durante los últimos 2 años mi pasión, por lo
-        que he mantenido un <span>aprendizaje continuo</span> considerando
-        diferentes puntos como:{" "}
-        <span>El aprendizaje de patrones de diseño</span>,
-        <span> arquitecturas de software</span>,
-        <span> lenguajes de programación</span>,<span> frameworks</span>,{" "}
-        <span>sistemas de gestión de bases de datos </span>,{" "}
-        <span>configuración de dominios </span> y <span>hostings</span>.
+        {t("About Me Section.Paragraphs.First.First Part")}{" "}
+        <span>{t("About Me Section.Paragraphs.First.Second Part")}</span>{" "}
+        {t("About Me Section.Paragraphs.First.Third Part")}{" "}
+        <span>{t("About Me Section.Paragraphs.First.Fourth Part")}</span>,
+        <span> {t("About Me Section.Paragraphs.First.Fifth Part")}</span>,
+        <span> {t("About Me Section.Paragraphs.First.Sixth Part")}</span>,
+        <span> {t("About Me Section.Paragraphs.First.Seventh Part")}</span>,{" "}
+        <span>{t("About Me Section.Paragraphs.First.Eighth Part")} </span>,{" "}
+        <span>{t("About Me Section.Paragraphs.First.Ninth Part")}</span>.
       </p>
       <p>
-        De esta manera, permitiendo el desarrollo Full Stack de una solución web
-        utilizando a su vez <span> buenas prácticas</span> que hacen referencia
-        al uso del software que permite{" "}
-        <span>controlar las versiones del código</span> y al diseño enfocado en
-        la <span>escalabilidad y mantenibilidad</span> de los sistemas.
+        {t("About Me Section.Paragraphs.Second.First Part")}{" "}
+        <span> {t("About Me Section.Paragraphs.Second.Second Part")}</span>{" "}
+        {t("About Me Section.Paragraphs.Second.Third Part")}{" "}
+        <span>{t("About Me Section.Paragraphs.Second.Fourth Part")}</span>{" "}
+        {t("About Me Section.Paragraphs.Second.Fifth Part")}{" "}
+        <span>{t("About Me Section.Paragraphs.Second.Sixth Part")}</span>{" "}
+        {t("About Me Section.Paragraphs.Second.Seventh Part")}
       </p>
     </div>
   );
