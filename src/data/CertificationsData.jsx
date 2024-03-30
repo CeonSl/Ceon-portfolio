@@ -34,7 +34,9 @@ const CertificationsData = () => {
         "Certifications Section.Certifications.First Certification.Date"
       )} - 2023`,
       company: "Universidad César Vallejo",
-      title: "Primer lugar en evento HACKATHÓN",
+      title: `${t(
+        "Certifications Section.Certifications.First Certification.Title"
+      )}`,
       img: Hackathon,
       smallImg: HackathonSmall,
       url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710446379869/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
@@ -45,7 +47,9 @@ const CertificationsData = () => {
         "Certifications Section.Certifications.Second Certification.Date"
       )} - 2023`,
       company: "Universidad César Vallejo",
-      title: "Tercer Lugar en evento Expowork 2023-1",
+      title: `${t(
+        "Certifications Section.Certifications.Second Certification.Title"
+      )}`,
       img: Expowork,
       smallImg: ExpoworkSmall,
       url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710443835510/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
@@ -56,7 +60,7 @@ const CertificationsData = () => {
         "Certifications Section.Certifications.Third Certification.Date"
       )} - 2022`,
       company: "Universidad César Vallejo",
-      title: "Asistente de Help Desk",
+      title: "“Asistente de Help Desk”",
       img: Helpdesk,
       smallImg: HelpdeskSmall,
       url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710444389027/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
@@ -67,7 +71,7 @@ const CertificationsData = () => {
         "Certifications Section.Certifications.Fourth Certification.Date"
       )} - 2023`,
       company: "Udemy",
-      title: "TypeScript sin fronteras: guía definitiva",
+      title: "“TypeScript sin fronteras: guía definitiva”",
       img: TypeScript,
       smallImg: TypeScriptSmall,
       url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710442896703/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
@@ -78,7 +82,7 @@ const CertificationsData = () => {
         "Certifications Section.Certifications.Fifth Certification.Date"
       )} - 2023`,
       company: "Udemy",
-      title: "Aprende Javascript ES9, HTML, CSS3 y NodeJS desde cero",
+      title: "“Aprende Javascript ES9, HTML, CSS3 y NodeJS desde cero”",
       img: Javascript,
       smallImg: JavascriptSmall,
       url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710442937830/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
@@ -89,7 +93,7 @@ const CertificationsData = () => {
         "Certifications Section.Certifications.Sixth Certification.Date"
       )} - 2023`,
       company: "freeCodeCamp",
-      title: "Responsive Web Design",
+      title: "“Responsive Web Design”",
       img: Responsive,
       smallImg: ResponsiveSmall,
       url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710483963868/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
@@ -100,7 +104,7 @@ const CertificationsData = () => {
         "Certifications Section.Certifications.Seventh Certification.Date"
       )} - 2023`,
       company: "Cisco Networking Academy",
-      title: "CCNAv7: Switching, Routing and Wireless Essentials",
+      title: "“CCNAv7: Switching, Routing and Wireless Essentials”",
       img: CCNAv7Switching,
       smallImg: CCNAv7SwitchingSmall,
       url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710994931792/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
@@ -111,7 +115,7 @@ const CertificationsData = () => {
         "Certifications Section.Certifications.Eighth Certification.Date"
       )} - 2023`,
       company: "Cisco Networking Academy",
-      title: "CCNAv7: Redes empresariales, Seguridad y Automatización",
+      title: "“CCNAv7: Redes empresariales, Seguridad y Automatización”",
       img: CCNAv7Redes,
       smallImg: CCNAv7RedesSmall,
       url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710995050294/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
@@ -122,7 +126,7 @@ const CertificationsData = () => {
         "Certifications Section.Certifications.Ninth Certification.Date"
       )} - 2024`,
       company: "Cisco Networking Academy",
-      title: "CyberOps Associate",
+      title: "“CyberOps Associate”",
       img: CyberOps,
       smallImg: CyberOpsSmall,
       url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710995108368/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
@@ -133,7 +137,7 @@ const CertificationsData = () => {
         "Certifications Section.Certifications.Tenth Certification.Date"
       )} - 2021`,
       company: "Cisco Networking Academy",
-      title: "CCNAv7: Introducción a Redes",
+      title: "“CCNAv7: Introducción a Redes”",
       img: CCNAv7Introduction,
       smallImg: CCNAv7IntroductionSmall,
       url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710994762150/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
@@ -144,7 +148,7 @@ const CertificationsData = () => {
         "Certifications Section.Certifications.Eleventh Certification.Date"
       )} - 2023`,
       company: "Cisco Networking Academy",
-      title: "Introducción a la Seguridad Cibernética",
+      title: "“Introducción a la Seguridad Cibernética”",
       img: Seguridad,
       smallImg: SeguridadSmall,
       url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710994863428/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",
@@ -155,7 +159,7 @@ const CertificationsData = () => {
         "Certifications Section.Certifications.Twelfth Certification.Date"
       )} - 2021`,
       company: "OpenEDG Python Institute",
-      title: "PCAP: Programming Essentials in Python",
+      title: "“PCAP: Programming Essentials in Python”",
       img: Python,
       smallImg: PythonSmall,
       url: "https://www.linkedin.com/in/carlos-enrique-oropeza/details/certifications/1710994633016/single-media-viewer/?profileId=ACoAADyQbPoB1hVA1JXn8w_bFPHn-pqBk0a_swk",

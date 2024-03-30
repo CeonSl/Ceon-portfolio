@@ -28,9 +28,11 @@
         "Title": "Certifications",
         "Certifications": {
             "First Certification": {
+                "Title": "First place in the event “HACKATHON – DESARROLLO WEB CON INTELIGENCIA ARTIFICIAL UCV”",
                 "Date": "June"
             },
             "Second Certification": {
+                "Title": "Third place in the event “Expowork 2023-1”",
                 "Date": "July"
             },
             "Third Certification": {
@@ -64,7 +66,7 @@
                 "Date": "August"
             }
         },
-        "Button Expand": "Certification"
+        "Button Expand": "Certificate"
     },
     "About Me Section": {
         "Title": "About Me",

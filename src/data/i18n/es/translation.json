@@ -28,9 +28,11 @@
         "Title": "Certificaciones",
         "Certifications": {
             "First Certification": {
+                "Title": "Primer lugar en evento “HACKATHON - DESARROLLO WEB CON INTELIGENCIA ARTIFICIAL UCV”",
                 "Date": "Junio"
             },
             "Second Certification": {
+                "Title": "Tercer Lugar en evento “Expowork 2023-1”",
                 "Date": "Julio"
             },
             "Third Certification": {
