@@ -1,12 +1,6 @@
-function GoBackTop(props) {
-  const { isIntersecting } = props;
+function GoBackTop() {
   return (
-    <a
-      href="#"
-      className={`icon-go-back-top  ${
-        isIntersecting ? "show-back-top" : "hide-back-top"
-      }`}
-    >
+    <a href="#" className="icon-go-back-top">
       <svg fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
         <path
           fillRule="evenodd"

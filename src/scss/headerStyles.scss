@@ -2,6 +2,10 @@ $border-color:#33333388 ;
 $background-color: #24242B;
 $background-color-hovered: #44444433;
 $font-p: 0.82rem;
+$separation: -24.5%;
+$separation-mobile: -18.5%;
+$font-smaller: 0.8rem; // small
+$font-smaller-responsive:calc($font-smaller / 1.1); // small
 
 @mixin tablet {
     @media screen and (max-width: 1000px){
@@ -38,208 +42,216 @@ $font-p: 0.82rem;
 .container-header {
     display: flex;
     justify-content: center;
+    position: relative;
     margin: .8rem;
     width: 100%;
     z-index: 1;
+    max-height: 50px;
 }
 
 .container-nav {
-    position: relative;
-    display: inline-flex;
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    padding: .5rem 1rem;
-
-
-    @include mobile() {
-        padding: .2rem .75rem;
-    }
-
-    background-color: $background-color;
-    border-radius: 25px;
-    border:1px solid $border-color;
-
-    li {
-        user-select: none;
-        &:not(.container-go-back-top-li):not(.container-change-language)  {
-            padding: .5rem 0;
-            a {
-                text-decoration: none;
-                color: #fff;
-                padding: .4rem .6rem;
-                letter-spacing: -.8px;
-                border: 1px solid transparent;
-                font-size: $font-p;
-                transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
-        
-                &:hover {
-                    background-color: $background-color-hovered;
-                    border: 1px solid $border-color;
-            }
-            }
-        }
-
-
-        &:nth-child(2) {
-            a {
-
-                border-radius: 25px 3px 3px 25px;
-            }
-        }
-        &:nth-child(3) {
-            a {
-
-                border-radius: 3px;
-            }
-        }
-        &:nth-child(4) {
-            a {
-
-                border-radius: 3px 25px 25px 3px;
-            }
-        }
-    }
-}
-
-
-.icon-go-back-top {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    margin-left: 2rem;
-    position:absolute;
+    position: relative;
+    gap: 1rem;
     height: 100%;
-    display: flex;
-    top: 0%;
-    
+    user-select: none;
+
     @include mobile() {
-    margin-left: 1rem;
+        gap: .2rem;
     }
 
-    svg {
-        padding: .5rem;
-        border-radius: 25px;
+
+    .container-change-language, .container-go-back-top-li {
+        align-items: center;
+        display: flex;
+    }
+
+    .container-change-language {
+        align-items: start;
+        .change-language {
+            ul {
+                height: 48px;
+                overflow: hidden;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                background-color: $background-color;
+                border: 1px solid $border-color;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+                @include mobile() {
+                    height: 39px;
+                }
+
+                &:hover {
+                    height: 143.5px;
+
+                    @include mobile() {
+                        height: 114px;
+                    }
+    
+                }
+                
+                li:first-child {
+                    border-radius:  20px 20px 0 0;
+                }
+    
+                li:last-child {
+                    border-radius: 0 0 20px 20px;
+                }
+    
+                li {
+                    padding: 0.9rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all .35s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    
+                    &:hover {
+                        background-color: $background-color-hovered;
+                    }
+                    
+                    @include mobile() {
+                        padding: 0.8rem;
+                    }
+
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: none;
+                        background-color: transparent;
+                        padding: 0;
+                        svg {
+                            width: 18px;
+                            height: 18px;
+                        
+                            @include mobile() {
+                                width: $font-smaller;
+                                height: $font-smaller;
+                            }
+                        }
+                    }
+                    p {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20px;
+                        height: 20px;
+                        font-size: 20px;
+                        @include mobile() {
+                            width: $font-smaller;
+                            height: $font-smaller;
+                            font-size: $font-smaller;
+                        }
+                        margin: 0;
+                        padding: 0;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .container-go-back-top-li {
         background-color: $background-color;
-        border: 1px solid $border-color;
-        width: 20px;
-        height: 20px;
-        transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
-        
-        @include mobile() {
-            padding: .4rem;
-            width: 14px;
-            height: 14px;
-        }
+        border-radius: 25px;
+        align-self: flex-start;
+        margin-top: 5px;
 
-        &:hover {
-            background-color: $background-color-hovered;
+        .icon-go-back-top {
+            background-color: $background-color;
+            border-radius: 25px;
+            padding: 0.6rem;
             border: 1px solid $border-color;
-        }
-    }
-}
-
-.show-back-top{
-    visibility: visible;
-    opacity: 1;
-    top: 0;
-    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.hide-back-top{
-    visibility: hidden;
-    opacity: 0;
-    top: -100%;
-    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.change-language {
-    position: absolute;
-    color: #fff;
-    background-color: $background-color;
-    border-radius: 15px;
-    border: 1px solid $border-color;
-    height: 45.5px ;
-
-    overflow: hidden;
-    left: -24.5%;
-    top: 3%;
-    transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
-
-    @include mobile() {
-        height: 35px;
-        left: -18.5%;
-        top: 6%;
-    }
-
-    &:hover {
-        height: 135px !important;
-    
-        @include mobile() {
-            height: 112px  !important;
-        }
-    }
-
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        
-        li {
-            cursor: pointer;
-            padding: .8rem !important;
+            width: 20px;
+            height: 20px;
+            text-decoration: none;
+            color: #fff;
 
             @include mobile() {
-                padding: .6rem !important;
+                padding: 0.4rem ;
+                width: 17px;
+                height: 17px;
             }
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 1px solid $border-color;
-            
-
-            &:nth-child(1) {
-                border-radius: 15px 15px 0 0;
-            }
-
-            &:nth-child(3) {
-                border-bottom: none;
-                border-radius: 0 0 15px 15px;
-            }
-            
-
-            button {
-                border: none;
-                background: transparent;
-                padding: 0;
-                width: 20px;
-                height: 20px;
-                cursor: pointer;
-                @include mobile() {
-                    width: 16px;
-                    height: 16px;
-                }
-
-                svg {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
-            p {
-                margin: 0;
-                font-size: 20px;
-                @include mobile() {
-                    font-size: 16px;
-                }
-            }
 
             &:hover {
                 background-color: $background-color-hovered;
             }
+
+            svg {
+                width: 20px;
+                height: 20px;
+
+                @include mobile() {
+                    width: 17px;
+                    height: 17px;
+                }
+    
+            }
         }
 
     }
-}
+
+    .hide-back-top {
+        visibility: 0;
+        transform: translateY(-180%);
+        transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .show-back-top {
+        visibility: 1;
+        transform: translateY(0%);
+        transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .list-item-container-links-page {
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            background-color: $background-color;
+            border-radius: 25px;
+            border:1px solid $border-color;
+            padding: 0;
+            li {
+                &:first-child {
+                    a {
+                        border-radius: 25px 0 0 25px;
+                    }
+                }
+
+                &:last-child {
+                    a {
+                        border-radius: 0 25px 25px 0;
+                    }
+                }
+                a {
+                    display: inline-block;
+                    padding: 1rem 1.2rem;
+
+                    @include mobile() {
+                        padding: 0.8rem ;
+                    }
+
+                    text-decoration: none;
+                    color: #fff;
+                    letter-spacing: -.5px;
+                    transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    
+
+                    &:hover {
+                        background-color: $background-color-hovered;
+                    }
+                }
+            }
+        }
+    }
+ }

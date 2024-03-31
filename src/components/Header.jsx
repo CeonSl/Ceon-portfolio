@@ -13,17 +13,25 @@ function Header({ isIntersecting }) {
             <li className="container-change-language">
               <ButtonChangeLanguange />
             </li>
-            <li>
-              <a href="#projects">{t("Header.Projects")}</a>
+            <li className="list-item-container-links-page">
+              <ul className="container-links-page">
+                <li>
+                  <a href="#projects">{t("Header.Projects")}</a>
+                </li>
+                <li>
+                  <a href="#about-me">{t("Header.About Me")}</a>
+                </li>
+                <li>
+                  <a href="#contact-me">{t("Header.Contact Me")}</a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a href="#about-me">{t("Header.About Me")}</a>
-            </li>
-            <li>
-              <a href="#contact-me">{t("Header.Contact Me")}</a>
-            </li>
-            <li className="container-go-back-top-li">
-              <GoBackTop isIntersecting={isIntersecting} />
+            <li
+              className={`container-go-back-top-li ${
+                isIntersecting ? "show-back-top" : "hide-back-top"
+              }`}
+            >
+              <GoBackTop />
             </li>
           </ul>
         </div>
