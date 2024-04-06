@@ -98,19 +98,19 @@
         "Form": {
             "Name": {
                 "Title": "Name",
-                "Placeholder": "First Name Last Name..."
+                "Placeholder": "Enter your first name and last name..."
             },
             "Email": {
                 "Title": "Email",
-                "Placeholder": "email1234@gmail.com..."
+                "Placeholder": "Enter your email..."
             },
             "Subject": {
                 "Title": "Subject",
-                "Placeholder": "Labor proposal..."
+                "Placeholder": "Enter subject..."
             },
             "Message": {
                 "Title": "Message",
-                "Placeholder": "I would be interested in working with..."
+                "Placeholder": "Enter message..."
             },
             "Button": "Send message"
         }

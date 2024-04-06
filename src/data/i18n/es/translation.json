@@ -98,19 +98,19 @@
         "Form": {
             "Name": {
                 "Title": "Nombre",
-                "Placeholder": "Nombre Apellido..."
+                "Placeholder": "Ingresa tu nombre y apellido..."
             },
             "Email": {
                 "Title": "Correo Electrónico",
-                "Placeholder": "correo1234@gmail.com..."
+                "Placeholder": "Ingresa tu correo electrónico..."
             },
             "Subject": {
                 "Title": "Asunto",
-                "Placeholder": "Propuesta laboral..."
+                "Placeholder": "Ingresa el asunto..."
             },
             "Message": {
                 "Title": "Mensaje",
-                "Placeholder": "Me interesaría que trab..."
+                "Placeholder": "Ingresa el mensaje..."
             },
             "Button": "Enviar mensaje"
         }
