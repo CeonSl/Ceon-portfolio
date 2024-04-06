@@ -174,7 +174,8 @@ $svg-size: 17px;
             gap: 3rem;
             width: 700px; // Important 
             transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
-            
+            align-items: center;
+
             @include tablet(){
                 gap: 1.5rem;
                 width: 600px;
@@ -312,8 +313,7 @@ $svg-size: 17px;
 
                     @include mobile(){
                         margin-top: 1rem;
-                        gap: .5rem;
-                        flex-wrap: wrap;
+                        gap: .2rem;
                     }
     
                     button {
@@ -347,6 +347,10 @@ $svg-size: 17px;
                         align-items: center;
                         gap: 1rem;
                         transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+                        @include mobile() {
+                            gap: 0.5rem;
+                        }
 
                         svg {
                             width: $svg-size;
