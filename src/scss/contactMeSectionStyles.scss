@@ -52,12 +52,7 @@ $background-color-hovered: #44444433;
         flex: 1;
         padding: 1rem;
         padding-right: 0;
-
-        @include tablet() {
-            padding-left: 0;
-            display: flex;
-            justify-content: center;
-        }
+        padding-left: 0;
 
         .form {
             display: flex;
@@ -65,7 +60,6 @@ $background-color-hovered: #44444433;
             gap: .2rem;
 
             @include tablet() {
-                width: 95%;
             }
 
             label {
@@ -74,8 +68,8 @@ $background-color-hovered: #44444433;
             }
 
             input,textarea {
-                max-width: 495px;
-                min-width: 100%;
+                flex-basis: 100%;
+                min-width: 0;
                 border: none;
                 background-color: transparent;
                 padding: .7rem;
@@ -85,24 +79,11 @@ $background-color-hovered: #44444433;
                 border-radius: 25px;
                 margin-bottom: 1.5rem;
                 color: #fff;
-
-                @include tablet() {
-                    width: 100%;
-                    min-width: 100%;
-                    max-width: 100%;
-                }
-
-                @include mobile() {
-                    max-width: 92%;
-                    min-width: 92%;
-                }
             }
-
-            @include mobile() {
-                width: 100%;
-            }
-
+            
             textarea {
+                display: inline-block;
+                resize: vertical;
                 max-height: 400px;
                 min-height: 100px;
             }
