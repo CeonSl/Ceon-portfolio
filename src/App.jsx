@@ -8,6 +8,7 @@ import useIntersecting from "./components/hooks/useIntersecting.jsx";
 import { preloader } from "./assets/js/preloader.js";
 import { useEffect } from "react";
 import CertificationsSection from "./components/CertificationsSection.jsx";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   const { isIntersectingState } = useIntersecting();
@@ -17,6 +18,7 @@ const App = () => {
 
   return (
     <>
+      <Analytics />
       <div id="body"></div>
       <div className="background"></div>
       <div className="container-app">
