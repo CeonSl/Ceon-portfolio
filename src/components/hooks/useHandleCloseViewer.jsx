@@ -3,7 +3,11 @@ import { useEffect } from "react";
 function useHandleCloseViewer({ setToggleViewer, toggleViewer }) {
   useEffect(() => {
     const handleClick = (e) => {
-      if (e.target.tagName != "IMG" && e.target.tagName != "BUTTON") {
+      if (
+        e.target.tagName != "IMG" &&
+        e.target.tagName != "BUTTON" &&
+        e.target.tagName != "svg"
+      ) {
         setToggleViewer(false);
       }
     };

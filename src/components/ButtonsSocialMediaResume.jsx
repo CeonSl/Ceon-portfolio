@@ -25,7 +25,7 @@ const ButtonsSocialMediaResume = () => {
       </li>
       <li>
         <ButtonAnchorDocs
-          url={"https://www.linkedin.com/in/carlos-enrique-oropeza"}
+          url={"https://www.linkedin.com/in/carlos-oropeza-n"}
           text={"LinkedIn"}
           icon={<LinkedIn />}
         />

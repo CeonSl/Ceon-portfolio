@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Expand from "./icons/Expand";
-import Redirect from "./icons/Redirect";
 import { handleOpenViewer } from "./logic/handleOpenViewer";
 import { useTranslation } from "react-i18next";
 
@@ -10,7 +9,6 @@ function Certification({
   title,
   company,
   date,
-  urlLinkedIn,
   classNameForShowingCard,
   setToggleViewer,
 }) {
@@ -45,10 +43,6 @@ function Certification({
             <button onClick={() => handleOpenViewer(setToggleViewer)}>
               <Expand /> {t("Certifications Section.Button Expand")}
             </button>
-            <a href={urlLinkedIn} target="_blank" rel="noreferrer">
-              <Redirect />
-              LinkedIn
-            </a>
           </div>
         </div>
       </div>

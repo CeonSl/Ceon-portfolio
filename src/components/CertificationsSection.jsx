@@ -41,8 +41,9 @@ function CertificationsSection() {
   return (
     <section className="container-certifications">
       <CertificationsViewer
-        title={certifications[currentCardId - 1].title}
-        img={certifications[currentCardId - 1].img}
+        certificationSelected={certifications[currentCardId - 1]}
+        certifications={certifications}
+        index={currentCardId - 1}
         setToggleViewer={setToggleViewer}
         toggleViewer={toggleViewer}
       />
