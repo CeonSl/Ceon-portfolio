@@ -1,4 +1,5 @@
 import Twitter from "../components/icons/Twitter.jsx";
+import GitHub from "../components/icons/GitHub.jsx";
 import Mail from "../components/icons/Mail.jsx";
 import { useState } from "react";
 import Check from "./icons/Check.jsx";
@@ -27,6 +28,13 @@ const ButtonsSocialMediaResume = () => {
           url={"https://twitter.com/CeonSl_"}
           text={"Twitter"}
           icon={<Twitter />}
+        />
+      </li>
+      <li>
+        <ButtonAnchorDocs
+          url={"https://github.com/CeonSl"}
+          text={"GitHub"}
+          icon={<GitHub />}
         />
       </li>
       <li>
