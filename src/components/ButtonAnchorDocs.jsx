@@ -1,7 +1,9 @@
 import { handleTimeout } from "./logic/handleTimeout";
-import CVDoc from "../assets/docs/Español CV GF - CARLOS ENRIQUE OROPEZA NEGRÓN.pdf";
+import CVDocSpanish from "../assets/docs/Español CV GF - CARLOS ENRIQUE OROPEZA NEGRÓN.pdf";
+import CVDocEnglish from "../assets/docs/English CV GF - CARLOS ENRIQUE OROPEZA NEGRÓN.pdf";
 import Check from "./icons/Check.jsx";
 import Resume from "../components/icons/Resume.jsx";
+import { useTranslation } from "react-i18next";
 
 function ButtonAnchorDocs({
   url,
@@ -11,11 +13,14 @@ function ButtonAnchorDocs({
   setDownloadResume = null,
   downloadResume = null,
 }) {
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language;
+
   if (click) {
     return (
       <>
         <a
-          href={CVDoc}
+          href={currentLang == "es" ? CVDocSpanish : CVDocEnglish}
           target="_blank"
           rel="noreferrer"
           onClick={() => handleTimeout(setDownloadResume)}

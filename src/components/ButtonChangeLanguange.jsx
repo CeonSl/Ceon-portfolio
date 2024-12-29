@@ -3,8 +3,6 @@ import { useTranslation } from "react-i18next";
 
 function ButtonChangeLanguange() {
   const { i18n } = useTranslation();
-  const currentLang = i18n.language;
-  console.log(currentLang);
 
   const handleChangeToSpanish = () => {
     i18n.changeLanguage("es");

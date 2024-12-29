@@ -1,4 +1,3 @@
-import LinkedIn from "../components/icons/LinkedIn.jsx";
 import Twitter from "../components/icons/Twitter.jsx";
 import Mail from "../components/icons/Mail.jsx";
 import { useState } from "react";
@@ -21,13 +20,6 @@ const ButtonsSocialMediaResume = () => {
           click={true}
           downloadResume={downloadResume}
           setDownloadResume={setDownloadResume}
-        />
-      </li>
-      <li>
-        <ButtonAnchorDocs
-          url={"https://www.linkedin.com/in/carlos-oropeza-n"}
-          text={"LinkedIn"}
-          icon={<LinkedIn />}
         />
       </li>
       <li>
